@@ -7,24 +7,24 @@ import {
   MapIcon,
   SparklesIcon,
 } from '@heroicons/react/24/outline';
-
+import { useEffect, useState } from 'react';
 import GithubIcon from '../components/Icon/GithubIcon';
-import InstagramIcon from '../components/Icon/InstagramIcon';
+// import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
-import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
-import TwitterIcon from '../components/Icon/TwitterIcon';
+// import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
+// import TwitterIcon from '../components/Icon/TwitterIcon';
 import heroImage from '../images/header-background.webp';
 import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
 import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
 import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
-import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
-import porfolioImage5 from '../images/portfolio/portfolio-5.jpg';
-import porfolioImage6 from '../images/portfolio/portfolio-6.jpg';
-import porfolioImage7 from '../images/portfolio/portfolio-7.jpg';
-import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
-import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
-import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
-import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
+// import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
+// import porfolioImage5 from '../images/portfolio/portfolio-5.jpg';
+// import porfolioImage6 from '../images/portfolio/portfolio-6.jpg';
+// import porfolioImage7 from '../images/portfolio/portfolio-7.jpg';
+// import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
+// import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
+// import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
+// import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
 import profilepic from '../images/profilepic.jpg';
 import testimonialImage from '../images/testimonial.webp';
 import {
@@ -44,8 +44,8 @@ import {
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
-  title: 'React Resume Template',
-  description: "Example site built with Tim Baker's react resume template",
+  title: 'Guillermo Follana Berná',
+  description: "Guillermo Follana Berná Resume",
 };
 
 /**
@@ -69,18 +69,15 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: `I'm Tim Baker.`,
+  name: `I'm Guillermo Follana Berná`,
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Victoria based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
-        at <strong className="text-stone-100">Instant Domains</strong> helping build a modern, mobile-first, domain
-        registrar and site builder.
+        I'm a Palma de Mallorca based <strong className="text-stone-100">Backend Software Engineer</strong>, currently working
+        at <strong className="text-stone-100"><a href="https://apsl.tech/">APSL a Nagarro Company</a></strong>.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me training in <strong className="text-stone-100">Muay Thai</strong>,
-        plucking my <strong className="text-stone-100">banjo</strong>, or exploring beautiful{' '}
-        <strong className="text-stone-100">Vancouver Island</strong>.
+        In my free time you can find me with my little daughter, going to the beach in summer, hiking in winter, reading about history in general, monetary history in particular, technology and/or philosophy.
       </p>
     </>
   ),
@@ -102,18 +99,69 @@ export const heroData: Hero = {
 /**
  * About section
  */
+const AgeCalculator = () => {
+  const [age, setAge] = useState('');
+
+  useEffect(() => {
+    const birthDate = new Date(1988, 3, 9);
+    const today = new Date();
+    let calculatedAge = today.getFullYear() - birthDate.getFullYear();
+    const monthDifference = today.getMonth() - birthDate.getMonth();
+
+    if (monthDifference < 0 || (monthDifference === 0 && today.getDate() < birthDate.getDate())) {
+      calculatedAge--;
+    }
+
+    setAge(calculatedAge.toString());
+  }, []);
+
+  return <span>{age}</span>;
+};
+
+const Experience = () => {
+  const [years, setYears] = useState('');
+
+  useEffect(() => {
+    const employDate = new Date(2022, 9, 1);
+    const today = new Date();
+    let calculatedExperience = today.getFullYear() - employDate.getFullYear();
+    const monthDifference = today.getMonth() - employDate.getMonth();
+
+    if (monthDifference < 0 || (monthDifference === 0 && today.getDate() < employDate.getDate())) {
+      calculatedExperience--;
+    }
+
+    setYears(calculatedExperience.toString());
+  }, []);
+
+  return <span>{years}</span>;
+};
+
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `Use this bio section as your way of describing yourself and saying what you do, what technologies you like
-  to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
-  in.`,
+  description: (
+    <>
+      <span className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
+        I am a motivated Junior Backend Web Developer with a robust background in Natural Sciences 
+        (PhD in Marine Ecology) and a strong passion for technology and data analysis. Over <Experience/> years of 
+        professional experience in backend development using Python and Django, complemented by a solid 
+        foundation in statistical analysis and database management. Proactive and self-taught, proficient 
+        in R and Python, seeking new challenges in data analysis and science beyond natural sciences. I 
+        believe I have made a good transition to web application development, which demonstrates my ability 
+        to adapt and learn new technologies, applying knowledge in a new discipline.
+      </span>
+      <span className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
+        "Be curious. Read widely. Try new things. What people call intelligence simply is curiosity." (Aaron Swartz)
+      </span>
+    </>
+  ),
   aboutItems: [
-    {label: 'Location', text: 'Victoria, BC', Icon: MapIcon},
-    {label: 'Age', text: '29', Icon: CalendarIcon},
-    {label: 'Nationality', text: 'Canadian / Irish', Icon: FlagIcon},
-    {label: 'Interests', text: 'Motorcycles, Muay Thai, Banjos', Icon: SparklesIcon},
-    {label: 'Study', text: 'University of Victoria', Icon: AcademicCapIcon},
-    {label: 'Employment', text: 'Instant Domains, inc.', Icon: BuildingOffice2Icon},
+    { label: 'Location', text: 'Inca, Palma de Mallorca', Icon: MapIcon },
+    { label: 'Age', text: <AgeCalculator />, Icon: CalendarIcon },
+    { label: 'Nationality', text: 'Spanish', Icon: FlagIcon },
+    { label: 'Interests', text: 'Diving, IoT, Read, Beach, Hiking', Icon: SparklesIcon },
+    { label: 'Study', text: 'Universidad de las Islas Baleares', Icon: AcademicCapIcon },
+    { label: 'Employment', text: 'APSL a Nagarro Company', Icon: BuildingOffice2Icon },
   ],
 };
 
@@ -125,67 +173,145 @@ export const skills: SkillGroup[] = [
     name: 'Spoken languages',
     skills: [
       {
-        name: 'English',
+        name: 'Spanish',
         level: 10,
       },
       {
-        name: 'French',
-        level: 4,
+        name: 'Catalan',
+        level: 8,
       },
       {
-        name: 'Spanish',
-        level: 3,
+        name: 'English',
+        level: 7,
       },
     ],
   },
   {
-    name: 'Frontend development',
+    name: 'Programming Languages',
     skills: [
       {
-        name: 'React',
+        name: 'R',
         level: 9,
       },
       {
-        name: 'Typescript',
+        name: 'Python',
+        level: 9,
+      },
+      {
+        name: 'Javascript',
+        level: 6,
+      },
+      {
+        name: 'SQL',
+        level: 6,
+      },
+      {
+        name: 'Bash',
+        level: 5,
+      },
+      {
+        name: 'Go',
+        level: 4,
+      },
+    ],
+  },
+  {
+    name: 'Frameworks and Libraries',
+    skills: [
+      {
+        name: 'Django',
+        level: 8,
+      },
+      {
+        name: 'Flask',
+        level: 6,
+      },
+      {
+        name: 'FastAPI',
         level: 7,
       },
       {
-        name: 'GraphQL',
+        name: 'React',
         level: 6,
       },
     ],
   },
   {
-    name: 'Backend development',
+    name: 'Web Technologies',
     skills: [
       {
-        name: 'Node.js',
+        name: 'REST API',
         level: 8,
       },
       {
-        name: 'Rust',
-        level: 5,
+        name: 'JSON',
+        level: 8,
       },
       {
-        name: 'Golang',
-        level: 4,
+        name: 'Google APIs (Maps, Gmail, YouTube, Calendar)',
+        level: 6,
+      },
+      {
+        name: 'CSS',
+        level: 6,
+      },
+      {
+        name: 'HTML',
+        level: 6,
+      },
+      {
+        name: 'AJAX',
+        level: 6,
+      },
+      {
+        name: 'XML',
+        level: 6,
+      },
+      {
+        name: 'Bootstrap',
+        level: 6,
       },
     ],
   },
   {
-    name: 'Mobile development',
+    name: 'Tools and platforms',
     skills: [
       {
-        name: 'React Native',
+        name: 'GitHub',
         level: 9,
       },
       {
-        name: 'Flutter',
-        level: 4,
+        name: 'GitLab',
+        level: 9,
       },
       {
-        name: 'Swift',
-        level: 3,
+        name: 'Docker',
+        level: 7,
+      },
+      {
+        name: 'JIRA',
+        level: 5,
+      },
+      {
+        name: 'Visual Studio Code',
+        level: 8,
+      },
+      {
+        name: 'Zulip',
+        level: 7,
+      },
+    ],
+  },
+  {
+    name: 'Database',
+    skills: [
+      {
+        name: 'PostgreSQL',
+        level: 9,
+      },
+      {
+        name: 'Redis',
+        level: 4,
       },
     ],
   },
@@ -196,75 +322,30 @@ export const skills: SkillGroup[] = [
  */
 export const portfolioItems: PortfolioItem[] = [
   {
-    title: 'Project title 1',
-    description: 'Give a short description of your project here.',
+    title: 'Development in medical and logistics management project',
+    client: 'A medical services group in Spain offering innovative diagnostic tools to determine the best therapeutic options for patients with cancer.',
+    description: 'Development and enhancement of functionalities in a medical management system. The project involved the design of both back-end and front-end solutions, with a strong focus on security, efficiency, and user experience.',
     url: 'https://reactresume.com',
     image: porfolioImage1,
   },
   {
     title: 'Project title 2',
+    client: '',
     description: 'Give a short description of your project here.',
     url: 'https://reactresume.com',
     image: porfolioImage2,
   },
   {
     title: 'Project title 3',
+    client: '',
     description: 'Give a short description of your project here.',
     url: 'https://reactresume.com',
     image: porfolioImage3,
   },
-  {
-    title: 'Project title 4',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage4,
-  },
-  {
-    title: 'Project title 5',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage5,
-  },
-  {
-    title: 'Project title 6',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage6,
-  },
-  {
-    title: 'Project title 7',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage7,
-  },
-  {
-    title: 'Project title 8',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage8,
-  },
-  {
-    title: 'Project title 9',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage9,
-  },
-  {
-    title: 'Project title 10',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage10,
-  },
-  {
-    title: 'Project title 11',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage11,
-  },
 ];
 
 /**
- * Resume section -- TODO: Standardize resume contact format or offer MDX
+ * Resume section
  */
 export const education: TimelineItem[] = [
   {
@@ -283,14 +364,30 @@ export const education: TimelineItem[] = [
 
 export const experience: TimelineItem[] = [
   {
-    date: 'March 2010 - Present',
-    location: 'Awesome Development Company',
-    title: 'Senior UX Engineer',
+    date: 'October 2010 - Present',
+    location: 'APSL a Nagarro Company',
+    title: 'Junior Backend Web Developer',
     content: (
-      <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
-      </p>
+      <div suppressHydrationWarning>
+        Design and development of efficient, secure and scalable solutions, combining full-stack programming skills with experience in agile methodologies.
+        <ul>
+          <li>Featured projects:</li>
+          <ul>
+            <li>- Medical and logistics management: development of advanced functionalities such as secure authentication (OTP tokens, password validators), optimized administrative interfaces and automatic generation of identifiers. Improved user experience through SCSS and visual components. Multi-region support and administrator management. Technology: Python (Django), PostgreSQL, JavaScript, Docker.</li>
+            <li>- Cinema location management: Platform with map integration, permissions management, file upload and image galleries. Key improvements in responsive design, performance and user management. Use of technologies such as Django REST Framework, PostgreSQL (PostGIS), Redis and Bootstrap.</li>
+          </ul>
+        </ul>
+        <p>
+        </p>
+        <ul>
+          <li>Internal projects:</li>
+          <ul>
+            <li>- Tool to monitor updates and vulnerabilities in projects.</li>
+            <li>- Platform for educational videos on web development and technology.</li>
+            <li>- Workspace reservation application.</li>
+          </ul>
+        </ul>
+      </div>
     ),
   },
   {
@@ -336,27 +433,27 @@ export const testimonial: TestimonialSection = {
 
 export const contact: ContactSection = {
   headerText: 'Get in touch.',
-  description: 'Here is a good spot for a message to your readers to let them know how best to reach out to you.',
+  description: 'Feel free to send me a message to contact me.',
   items: [
     {
       type: ContactType.Email,
-      text: 'reachout@timbaker.me',
-      href: 'mailto:reachout@timbaker.me',
+      text: 'gfollana@gmail.com',
+      href: 'mailto:gfollana@gmail.com',
     },
     {
       type: ContactType.Location,
-      text: 'Victoria BC, Canada',
-      href: 'https://www.google.ca/maps/place/Victoria,+BC/@48.4262362,-123.376775,14z',
+      text: 'Inca, Islas Baleares, Spain',
+      href: 'https://maps.app.goo.gl/ZC6JhXkMNbix8uAM7',
     },
-    {
-      type: ContactType.Instagram,
-      text: '@tbakerx',
-      href: 'https://www.instagram.com/tbakerx/',
-    },
+    // {
+    //   type: ContactType.Instagram,
+    //   text: '@tbakerx',
+    //   href: 'https://www.instagram.com/tbakerx/',
+    // },
     {
       type: ContactType.Github,
-      text: 'tbakerx',
-      href: 'https://github.com/tbakerx',
+      text: 'GuilleFB',
+      href: 'https://github.com/GuilleFB',
     },
   ],
 };
@@ -365,9 +462,9 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/tbakerx'},
-  {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},
-  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/timbakerx/'},
-  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/reactresume/'},
-  {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/TimBakerx'},
+  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/GuilleFB'},
+  // {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},
+  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/guillefb/'},
+  // {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/reactresume/'},
+  // {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/TimBakerx'},
 ];

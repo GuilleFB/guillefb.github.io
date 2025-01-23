@@ -1,5 +1,5 @@
 import {StaticImageData} from 'next/image';
-import {FC, ForwardRefExoticComponent, SVGProps} from 'react';
+import {FC, ForwardRefExoticComponent, SVGProps, JSX, ReactNode} from 'react';
 
 import {IconProps} from '../components/Icon/Icon';
 
@@ -39,13 +39,13 @@ interface HeroActionItem {
  */
 export interface About {
   profileImageSrc?: string;
-  description: string;
+  description: JSX.Element;
   aboutItems: AboutItem[];
 }
 
 export interface AboutItem {
   label: string;
-  text: string;
+  text: ReactNode;
   Icon?: ForwardRefExoticComponent<Omit<SVGProps<SVGSVGElement>, 'ref'>>;
 }
 
@@ -78,6 +78,7 @@ export interface SkillGroup {
  */
 export interface PortfolioItem {
   title: string;
+  client: string;
   description: string;
   url: string;
   image: string | StaticImageData;

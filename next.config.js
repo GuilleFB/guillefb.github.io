@@ -21,7 +21,7 @@ const nextConfig = {
   poweredByHeader: false,
   productionBrowserSourceMaps: false,
   reactStrictMode: true,
-  swcMinify: true,
+  // swcMinify: true,
   trailingSlash: false,
   images: {
     remotePatterns: [

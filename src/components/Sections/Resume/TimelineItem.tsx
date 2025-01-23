@@ -1,8 +1,10 @@
 import {FC, memo} from 'react';
 
-import {TimelineItem} from '../../../data/dataDef';
+// Use a type-only import for TimelineItem
+import type {TimelineItem as TimelineItemType} from '../../../data/dataDef';
 
-const TimelineItem: FC<{item: TimelineItem}> = memo(({item}) => {
+// Use a different name for the component
+const TimelineItemComponent: FC<{item: TimelineItemType}> = memo(({item}) => {
   const {title, date, location, content} = item;
   return (
     <div className="flex flex-col pb-8 text-center last:pb-0 md:text-left">
@@ -19,5 +21,5 @@ const TimelineItem: FC<{item: TimelineItem}> = memo(({item}) => {
   );
 });
 
-TimelineItem.displayName = 'TimelineItem';
-export default TimelineItem;
+TimelineItemComponent.displayName = 'TimelineItem';
+export default TimelineItemComponent;

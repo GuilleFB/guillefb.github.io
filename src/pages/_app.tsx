@@ -1,15 +1,9 @@
-import 'tailwindcss/tailwind.css';
-import '../globalStyles.scss';
+import '../globalStyles.scss'; // Importa solo tu archivo SCSS
+import type { AppProps } from 'next/app';
+import { memo, JSX } from 'react';
 
-import type {AppProps} from 'next/app';
-import {memo} from 'react';
-
-const MyApp = memo(({Component, pageProps}: AppProps): JSX.Element => {
-  return (
-    <>
-      <Component {...pageProps} />
-    </>
-  );
+const MyApp = memo(({ Component, pageProps }: AppProps): JSX.Element => {
+  return <Component {...pageProps} />;
 });
 
 export default MyApp;

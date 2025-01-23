@@ -12,7 +12,9 @@ function useInterval(callback: () => void, delay: number | null) {
       return;
     }
 
-    const id = setInterval(() => savedCallback.current(), delay);
+    const id = setInterval(() => {
+      savedCallback.current();
+    }, delay);
 
     return () => clearInterval(id);
   }, [delay]);

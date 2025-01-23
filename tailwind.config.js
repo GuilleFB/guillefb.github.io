@@ -1,16 +1,15 @@
 // eslint-disable-next-line no-undef
 module.exports = {
-  content: ['./src/**/*.{js,ts,jsx,tsx,css,scss}'],
-  // darkMode: 'media', // or 'media' or 'class'
+  content: ['./src/**/*.{js,ts,jsx,tsx}'], // Simplificado
   theme: {
     extend: {
       colors: {
-        yellow: '#efc603',
+        yellow: '#efc603', // Color personalizado
       },
       keyframes: {
         typing: {
-          '0%, 100%': {width: '0%'},
-          '30%, 70%': {width: '100%'},
+          '0%, 100%': { width: '0%' },
+          '30%, 70%': { width: '100%' },
         },
         blink: {
           '0%': {
@@ -29,10 +28,10 @@ module.exports = {
         },
       },
       screens: {
-        touch: {raw: 'only screen and (pointer: coarse)'},
+        touch: { raw: 'only screen and (pointer: coarse)' }, // Pantallas táctiles
       },
     },
   },
   // eslint-disable-next-line no-undef
-  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
+  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')], // Plugins de Tailwind
 };

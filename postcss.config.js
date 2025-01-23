@@ -1,13 +1,8 @@
 /* eslint-env node */
-
 module.exports = {
   plugins: {
-    'tailwindcss/nesting': {},
-    tailwindcss: {},
-    autoprefixer: {},
-    'postcss-preset-env': {
-      features: {'nesting-rules': false},
-    },
-    ...(process.env.NODE_ENV === 'production' ? {cssnano: {}} : {}),
+    tailwindcss: {}, // Procesa TailwindCSS
+    autoprefixer: {}, // Agrega prefijos de navegadores
+    ...(process.env.NODE_ENV === 'production' ? { cssnano: {} } : {}), // Minifica en producción
   },
 };

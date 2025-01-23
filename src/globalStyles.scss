@@ -3,24 +3,28 @@
 @tailwind utilities;
 
 @layer utilities {
-  /* Chrome, Safari and Opera */
+
+  /* Clase para ocultar la barra de desplazamiento */
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
 
   .no-scrollbar {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
   }
 }
 
+/* Ajustes para h-screen en dispositivos iOS */
 @supports (-webkit-touch-callout: none) {
   .h-screen {
     height: -webkit-fill-available;
   }
 }
 
-/* Global styles */
+/* Estilos globales */
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -40,6 +44,7 @@ body {
   background-color: #fafafa;
 }
 
+/* Estilos para tablas */
 td,
 th {
   padding: 4px 8px 4px 4px;

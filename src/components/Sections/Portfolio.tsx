@@ -1,7 +1,7 @@
 import {ArrowTopRightOnSquareIcon} from '@heroicons/react/24/outline';
 import classNames from 'classnames';
 import Image from 'next/image';
-import {FC, memo, MouseEvent, useCallback, useEffect, useRef, useState} from 'react';
+import {FC, memo, MouseEvent, useCallback, useEffect, useRef, useState, RefObject} from 'react';
 
 import {isMobile} from '../../config';
 import {portfolioItems, SectionId} from '../../data/data';
@@ -41,7 +41,7 @@ export default Portfolio;
 const ItemOverlay: FC<{item: PortfolioItem}> = memo(({item: {url, title, description}}) => {
   const [mobile, setMobile] = useState(false);
   const [showOverlay, setShowOverlay] = useState(false);
-  const linkRef = useRef<HTMLAnchorElement>(null);
+  const linkRef = useRef<HTMLAnchorElement>(null); // Use HTMLAnchorElement instead of HTMLElement
 
   useEffect(() => {
     // Avoid hydration styling errors by setting mobile in useEffect
@@ -49,10 +49,11 @@ const ItemOverlay: FC<{item: PortfolioItem}> = memo(({item: {url, title, descrip
       setMobile(true);
     }
   }, []);
-  useDetectOutsideClick(linkRef, () => setShowOverlay(false));
+
+  useDetectOutsideClick(linkRef as RefObject<HTMLElement>, () => setShowOverlay(false)); // Assert linkRef as RefObject<HTMLElement>
 
   const handleItemClick = useCallback(
-    (event: MouseEvent<HTMLElement>) => {
+    (event: MouseEvent<HTMLAnchorElement>) => {
       if (mobile && !showOverlay) {
         event.preventDefault();
         setShowOverlay(!showOverlay);
@@ -64,14 +65,15 @@ const ItemOverlay: FC<{item: PortfolioItem}> = memo(({item: {url, title, descrip
   return (
     <a
       className={classNames(
-        'absolute inset-0 h-full w-full  bg-gray-900 transition-all duration-300',
+        'absolute inset-0 h-full w-full bg-gray-900 transition-all duration-300',
         {'opacity-0 hover:opacity-80': !mobile},
         showOverlay ? 'opacity-80' : 'opacity-0',
       )}
       href={url}
       onClick={handleItemClick}
-      ref={linkRef}
-      target="_blank">
+      ref={linkRef} // Now compatible with HTMLAnchorElement
+      target="_blank"
+      rel="noopener noreferrer"> {/* Added for security best practices */}
       <div className="relative h-full w-full p-4">
         <div className="flex h-full w-full flex-col gap-y-2 overflow-y-auto overscroll-contain">
           <h2 className="text-center font-bold text-white opacity-100">{title}</h2>
