@@ -39,7 +39,7 @@ interface HeroActionItem {
  */
 export interface About {
   profileImageSrc?: string;
-  description: JSX.Element;
+  description: ReactNode;
   aboutItems: AboutItem[];
 }
 
@@ -91,7 +91,7 @@ export interface TimelineItem {
   date: string;
   location: string;
   title: string;
-  content: JSX.Element;
+  content: string | JSX.Element;
 }
 
 /**

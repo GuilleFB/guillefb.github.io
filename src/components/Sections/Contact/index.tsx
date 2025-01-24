@@ -1,8 +1,9 @@
 import {DevicePhoneMobileIcon, EnvelopeIcon, MapPinIcon} from '@heroicons/react/24/outline';
 import classNames from 'classnames';
-import {FC, memo} from 'react';
+import {FC, memo, useMemo, useEffect, useState} from 'react';
 
-import {contact, SectionId} from '../../../data/data';
+import {isApple, isMobile} from '../../../config';
+import {contact, SectionId, testimonial} from '../../../data/data';
 import {ContactType, ContactValue} from '../../../data/dataDef';
 import FacebookIcon from '../../Icon/FacebookIcon';
 import GithubIcon from '../../Icon/GithubIcon';
@@ -10,7 +11,7 @@ import InstagramIcon from '../../Icon/InstagramIcon';
 import LinkedInIcon from '../../Icon/LinkedInIcon';
 import TwitterIcon from '../../Icon/TwitterIcon';
 import Section from '../../Layout/Section';
-import ContactForm from './ContactForm';
+// import ContactForm from './ContactForm';
 
 const ContactValueMap: Record<ContactType, ContactValue> = {
   [ContactType.Email]: {Icon: EnvelopeIcon, srLabel: 'Email'},
@@ -25,17 +26,37 @@ const ContactValueMap: Record<ContactType, ContactValue> = {
 
 const Contact: FC = memo(() => {
   const {headerText, description, items} = contact;
+  const {imageSrc} = testimonial;
+  const [parallaxEnabled, setParallaxEnabled] = useState(false);
+
+  const resolveSrc = useMemo(() => {
+    if (!imageSrc) return undefined;
+    return typeof imageSrc === 'string' ? imageSrc : imageSrc.src;
+  }, [imageSrc]);
+  
+  // Mobile iOS doesn't allow background-fixed elements
+  useEffect(() => {
+    setParallaxEnabled(!(isMobile && isApple));
+  }, []);
+  
   return (
-    <Section className="bg-neutral-800" sectionId={SectionId.Contact}>
+    <Section noPadding sectionId={SectionId.Contact}>
+      <div
+        className={classNames(
+          'flex w-full items-center justify-center bg-cover bg-center px-4 py-16 md:py-24 lg:px-8',
+          parallaxEnabled && 'bg-fixed',
+          {'bg-neutral-700': !imageSrc},
+        )}
+        style={imageSrc ? {backgroundImage: `url(${resolveSrc}`} : undefined}>
       <div className="flex flex-col gap-y-6">
         <div className="flex flex-col gap-6 md:flex-row md:items-center">
           <EnvelopeIcon className="hidden h-16 w-16 text-white md:block" />
           <h2 className="text-2xl font-bold text-white">{headerText}</h2>
         </div>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-          <div className="order-2 col-span-1 md:order-1 ">
+          {/* <div className="order-2 col-span-1 md:order-1 ">
             <ContactForm />
-          </div>
+          </div> */}
           <div className="order-1 col-span-1 flex flex-col gap-y-4 md:order-2">
             <p className="prose leading-6 text-neutral-300">{description}</p>
             <dl className="flex flex-col space-y-4 text-base text-neutral-500 sm:space-y-2">
@@ -62,6 +83,7 @@ const Contact: FC = memo(() => {
             </dl>
           </div>
         </div>
+      </div>
       </div>
     </Section>
   );

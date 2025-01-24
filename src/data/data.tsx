@@ -1,6 +1,8 @@
 import {
   AcademicCapIcon,
-  ArrowDownTrayIcon,
+  BookOpenIcon,
+  ChatBubbleBottomCenterTextIcon,
+  // ArrowDownTrayIcon,
   BuildingOffice2Icon,
   CalendarIcon,
   FlagIcon,
@@ -14,13 +16,13 @@ import LinkedInIcon from '../components/Icon/LinkedInIcon';
 // import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
 // import TwitterIcon from '../components/Icon/TwitterIcon';
 import heroImage from '../images/header-background.webp';
-import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
+// import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
 import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
 import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
-// import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
-// import porfolioImage5 from '../images/portfolio/portfolio-5.jpg';
-// import porfolioImage6 from '../images/portfolio/portfolio-6.jpg';
-// import porfolioImage7 from '../images/portfolio/portfolio-7.jpg';
+import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
+import porfolioImage5 from '../images/portfolio/portfolio-5.jpg';
+import porfolioImage6 from '../images/portfolio/portfolio-6.jpg';
+import porfolioImage7 from '../images/portfolio/portfolio-7.jpg';
 // import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
 // import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
 // import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
@@ -45,7 +47,7 @@ import {
  */
 export const homePageMeta: HomepageMeta = {
   title: 'Guillermo Follana Berná',
-  description: "Guillermo Follana Berná Resume",
+  description: "Guillermo Follana Berná Porfolio",
 };
 
 /**
@@ -69,7 +71,7 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: `I'm Guillermo Follana Berná`,
+  name: `Hello, I'm Guillermo Follana Berná`,
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
@@ -83,15 +85,16 @@ export const heroData: Hero = {
   ),
   actions: [
     {
-      href: '/assets/resume.pdf',
+      href: '/#resume',
       text: 'Resume',
       primary: true,
-      Icon: ArrowDownTrayIcon,
+      Icon: BookOpenIcon,
     },
     {
       href: `#${SectionId.Contact}`,
       text: 'Contact',
       primary: false,
+      Icon: ChatBubbleBottomCenterTextIcon,
     },
   ],
 };
@@ -141,7 +144,6 @@ export const aboutData: About = {
   profileImageSrc: profilepic,
   description: (
     <>
-      <span className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
         I am a motivated Junior Backend Web Developer with a robust background in Natural Sciences 
         (PhD in Marine Ecology) and a strong passion for technology and data analysis. Over <Experience/> years of 
         professional experience in backend development using Python and Django, complemented by a solid 
@@ -149,10 +151,10 @@ export const aboutData: About = {
         in R and Python, seeking new challenges in data analysis and science beyond natural sciences. I 
         believe I have made a good transition to web application development, which demonstrates my ability 
         to adapt and learn new technologies, applying knowledge in a new discipline.
-      </span>
-      <span className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
+        <p></p>
         "Be curious. Read widely. Try new things. What people call intelligence simply is curiosity." (Aaron Swartz)
-      </span>
+        <p></p>
+        "Live as if you were going to die tomorrow. Learn as if you will live forever." (Mahatma Gandhi)
     </>
   ),
   aboutItems: [
@@ -160,7 +162,18 @@ export const aboutData: About = {
     { label: 'Age', text: <AgeCalculator />, Icon: CalendarIcon },
     { label: 'Nationality', text: 'Spanish', Icon: FlagIcon },
     { label: 'Interests', text: 'Diving, IoT, Read, Beach, Hiking', Icon: SparklesIcon },
-    { label: 'Study', text: 'Universidad de las Islas Baleares', Icon: AcademicCapIcon },
+    { label: 'Study', text: <>
+                              <p>
+                              University of Alicante (Degree Marine Science)
+                              </p>
+                              <p>
+                              University of Murcia (Master Fisheries Research)
+                              </p>
+                              <p>
+                              University of Islas Baleares (PhD Marine Ecology)
+                              </p>
+                              </>, 
+                              Icon: AcademicCapIcon },
     { label: 'Employment', text: 'APSL a Nagarro Company', Icon: BuildingOffice2Icon },
   ],
 };
@@ -212,6 +225,14 @@ export const skills: SkillGroup[] = [
       {
         name: 'Go',
         level: 4,
+      },
+      {
+        name: 'LaTeX',
+        level: 8,
+      },
+      {
+        name: 'Markdown',
+        level: 8,
       },
     ],
   },
@@ -289,6 +310,10 @@ export const skills: SkillGroup[] = [
         level: 7,
       },
       {
+        name: 'Redmine',
+        level: 6,
+      },
+      {
         name: 'JIRA',
         level: 5,
       },
@@ -299,6 +324,18 @@ export const skills: SkillGroup[] = [
       {
         name: 'Zulip',
         level: 7,
+      },
+      {
+        name: 'Trivy',
+        level: 7,
+      },
+      {
+        name: 'Swagger API',
+        level: 7,
+      },
+      {
+        name: 'Dependency track',
+        level: 9,
       },
     ],
   },
@@ -311,6 +348,10 @@ export const skills: SkillGroup[] = [
       },
       {
         name: 'Redis',
+        level: 5,
+      },
+            {
+        name: 'Mongo',
         level: 4,
       },
     ],
@@ -325,22 +366,43 @@ export const portfolioItems: PortfolioItem[] = [
     title: 'Development in medical and logistics management project',
     client: 'A medical services group in Spain offering innovative diagnostic tools to determine the best therapeutic options for patients with cancer.',
     description: 'Development and enhancement of functionalities in a medical management system. The project involved the design of both back-end and front-end solutions, with a strong focus on security, efficiency, and user experience.',
-    url: 'https://reactresume.com',
-    image: porfolioImage1,
-  },
-  {
-    title: 'Project title 2',
-    client: '',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    url: 'https://www.reveal-genomics.com/',
     image: porfolioImage2,
   },
   {
-    title: 'Project title 3',
-    client: '',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'Application for the management of film locations and projects',
+    client: 'Company dedicated to the search of film locations.',
+    description: 'Web platform for location management and film projects with advanced management, mapping and collaboration features. Project in active development with continuous improvements in user interface, location management features and user experience.',
+    url: 'https://scoutters.com/',
     image: porfolioImage3,
+  },
+  {
+    title: 'Internal Projects',
+    client: 'Versionator, to find an open-source solution with a front-end that would allow us to monitor updates and vulnerabilities of the packages used in various projects.',
+    description: '',
+    url: '#portfolio',
+    image: porfolioImage4,
+  },
+  {
+    title: 'Internal Projects',
+    client: 'Tools Research, the goal was to identify a tool that could automatically generate an API from a database.',
+    description: '',
+    url: '#portfolio',
+    image: porfolioImage5,
+  },
+  {
+    title: 'Internal Projects',
+    client: 'Lightning, platform created to share knowledge and news in the world of technology.',
+    description: '',
+    url: 'https://lightnings.apsl.net/',
+    image: porfolioImage6,
+  },
+  {
+    title: 'Internal Projects',
+    client: 'HotChair, a project which goal is to offer companies a user-friendly app to make workspace reservations.',
+    description: '',
+    url: 'https://hotchair.es/',
+    image: porfolioImage7,
   },
 ];
 
@@ -349,56 +411,71 @@ export const portfolioItems: PortfolioItem[] = [
  */
 export const education: TimelineItem[] = [
   {
-    date: 'April 2007',
-    location: 'Clown college',
-    title: 'Masters in Beer tasting',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    date: '2021',
+    location: 'University of Balearic Island',
+    title: 'Doctor in Marine Ecology',
+    content: '',
   },
   {
-    date: 'March 2003',
-    location: 'School of Business',
-    title: 'What did you study 101',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    date: '2014',
+    location: 'University of Murcia',
+    title: 'Master in Fishery Resources Management',
+    content: '',
+  },
+  {
+    date: '2013',
+    location: 'University of Alicante',
+    title: 'Marine Science Graduate',
+    content: '',
+  },
+  {
+    date: '2011',
+    location: 'University of Alicante',
+    title: 'Bachelor in Biology',
+    content: '',
   },
 ];
 
 export const experience: TimelineItem[] = [
   {
-    date: 'October 2010 - Present',
+    date: 'October 2022 - Present',
     location: 'APSL a Nagarro Company',
     title: 'Junior Backend Web Developer',
     content: (
-      <div suppressHydrationWarning>
+      <>
         Design and development of efficient, secure and scalable solutions, combining full-stack programming skills with experience in agile methodologies.
-        <ul>
-          <li>Featured projects:</li>
-          <ul>
-            <li>- Medical and logistics management: development of advanced functionalities such as secure authentication (OTP tokens, password validators), optimized administrative interfaces and automatic generation of identifiers. Improved user experience through SCSS and visual components. Multi-region support and administrator management. Technology: Python (Django), PostgreSQL, JavaScript, Docker.</li>
-            <li>- Cinema location management: Platform with map integration, permissions management, file upload and image galleries. Key improvements in responsive design, performance and user management. Use of technologies such as Django REST Framework, PostgreSQL (PostGIS), Redis and Bootstrap.</li>
-          </ul>
-        </ul>
-        <p>
-        </p>
-        <ul>
-          <li>Internal projects:</li>
-          <ul>
-            <li>- Tool to monitor updates and vulnerabilities in projects.</li>
-            <li>- Platform for educational videos on web development and technology.</li>
-            <li>- Workspace reservation application.</li>
-          </ul>
-        </ul>
-      </div>
+        In my current role, I design and develop efficient, secure, and scalable solutions using full-stack programming skills and agile methodologies. 
+        I have led the implementation of advanced features, including secure authentication systems (OTP tokens, password validators), optimized admin interfaces, and automated ID generation. 
+        Notable achievements include enhancing user experience through responsive design, SCSS styling, and reusable components, as well as integrating interactive maps, file uploads, and image galleries.
+        I also implemented multi-region support and robust permission management systems for administrators, ensuring seamless platform operation across geographies. 
+        Key technologies I work with include Django, Django REST Framework, PostgreSQL (with PostGIS), Redis, Docker, and Bootstrap. 
+        These efforts have significantly improved platform performance, security, and usability, while ensuring scalability for future growth. 
+        My focus on delivering high-quality, user-centric solutions has consistently driven positive outcomes for both users and stakeholders.
+      </>
     ),
   },
   {
-    date: 'March 2007 - February 2010',
-    location: 'Garage Startup Studio',
-    title: 'Junior bug fixer',
+    date: 'November 2020 - October 2022',
+    location: 'Spanish Institute of Oceanography',
+    title: 'Technical Specialist',
     content: (
-      <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
-      </p>
+      <>
+        <strong>Database Development & Marine Spatial Planning Expertise</strong> In my previous role, I spearheaded the development, maintenance, and analysis of Spain's allochthonous species database, 
+        integrating data from international sources (GBIF, WORMS, FishBase, AlgaeBase) via APIs, web scraping (R, Python), and field 
+        campaigns aboard oceanographic vessels. This required meticulous validation to ensure data accuracy and interoperability, often 
+        under tight deadlines for critical scientific reports.
+        A key achievement was leading the cumulative impact assessment for marine spatial planning (MSP) in the Western Mediterranean. 
+        I designed data-driven scenarios using GIS tools (QGIS/ArcGIS), R, Python, and PostgreSQL, and authored technical reports to 
+        guide cross-border policy recommendations. 
+        This involved coordinating with EU Member States, third countries, and stakeholders to align spatial uses (e.g., fisheries, conservation zones) 
+        with regulatory frameworks—a process demanding adaptability and consensus-building under pressure.
+        I also contributed to the MSPMED project, managing activities, drafting scientific publications, and supporting budget oversight. 
+        My ability to balance competing priorities—such as synthesizing data for high-stakes reports while organizing multi-national workshops—proved critical to meeting project milestones. <strong>Technical Skills & Outcomes:</strong> Proficient 
+        in data automation (R, Python scripts), spatial analysis (GIS), and database management (PostgreSQL).
+        Experienced in translating complex datasets into actionable insights for policymakers.
+        Published research in peer-reviewed journals, enhancing the project's academic impact.
+        Working in fast-paced, multidisciplinary environments honed my resilience and time-management skills, particularly during offshore campaigns or urgent deliverables for EU-funded initiatives.
+      </>
     ),
   },
 ];
