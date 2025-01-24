@@ -1,5 +1,5 @@
-import {FC, memo, useCallback, useMemo, useState} from 'react';
-
+import {FC, memo, useCallback, useMemo, useState, useRef} from 'react';
+import {ReCAPTCHA} from 'react-google-recaptcha'
 interface FormData {
   name: string;
   email: string;
@@ -28,7 +28,7 @@ const ContactForm: FC = memo(() => {
     },
     [data],
   );
-
+  
   const handleSendMessage = useCallback(
     async (event: React.FormEvent<HTMLFormElement>) => {
       event.preventDefault();
@@ -42,7 +42,6 @@ const ContactForm: FC = memo(() => {
 
   const inputClasses =
     'bg-neutral-700 border-0 focus:border-0 focus:outline-none focus:ring-1 focus:ring-orange-600 rounded-md placeholder:text-neutral-400 placeholder:text-sm text-neutral-200 text-sm';
-
   return (
     <form className="grid min-h-[320px] grid-cols-1 gap-y-4" method="POST" onSubmit={handleSendMessage}>
       <input className={inputClasses} name="name" onChange={onChange} placeholder="Name" required type="text" />
@@ -64,6 +63,7 @@ const ContactForm: FC = memo(() => {
         required
         rows={6}
       />
+      <ReCAPTCHA sitekey='6LdN4cEqAAAAAJ1XcaecJLmw199ml8AP0OjZZjlv' />
       <button
         aria-label="Submit contact form"
         className="w-max rounded-full border-2 border-orange-600 bg-stone-900 px-4 py-2 text-sm font-medium text-white shadow-md outline-none hover:bg-stone-800 focus:ring-2 focus:ring-orange-600 focus:ring-offset-2 focus:ring-offset-stone-800"

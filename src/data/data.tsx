@@ -14,9 +14,17 @@ import LinkedInIcon from '../components/Icon/LinkedInIcon';
 // import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
 // import TwitterIcon from '../components/Icon/TwitterIcon';
 import heroImage from '../images/header-background.webp';
-import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
+// import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
 import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
 import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
+import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
+import porfolioImage5 from '../images/portfolio/portfolio-5.jpg';
+import porfolioImage6 from '../images/portfolio/portfolio-6.jpg';
+import porfolioImage7 from '../images/portfolio/portfolio-7.jpg';
+import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
+import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
+import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
+import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
 import profilepic from '../images/profilepic.jpg';
 import testimonialImage from '../images/testimonial.webp';
 import {
@@ -61,7 +69,7 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: `I'm Guillermo Follana Berná`,
+  name: `Hello, I'm Guillermo Follana Berná`,
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
@@ -133,7 +141,6 @@ export const aboutData: About = {
   profileImageSrc: profilepic,
   description: (
     <>
-      <span className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
         I am a motivated Junior Backend Web Developer with a robust background in Natural Sciences 
         (PhD in Marine Ecology) and a strong passion for technology and data analysis. Over <Experience/> years of 
         professional experience in backend development using Python and Django, complemented by a solid 
@@ -141,10 +148,10 @@ export const aboutData: About = {
         in R and Python, seeking new challenges in data analysis and science beyond natural sciences. I 
         believe I have made a good transition to web application development, which demonstrates my ability 
         to adapt and learn new technologies, applying knowledge in a new discipline.
-      </span>
-      <span className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
+        <p></p>
         "Be curious. Read widely. Try new things. What people call intelligence simply is curiosity." (Aaron Swartz)
-      </span>
+        <p></p>
+        "Live as if you were going to die tomorrow. Learn as if you will live forever." (Mahatma Gandhi)
     </>
   ),
   aboutItems: [
@@ -281,6 +288,10 @@ export const skills: SkillGroup[] = [
         level: 7,
       },
       {
+        name: 'Redmine',
+        level: 6,
+      },
+      {
         name: 'JIRA',
         level: 5,
       },
@@ -291,6 +302,18 @@ export const skills: SkillGroup[] = [
       {
         name: 'Zulip',
         level: 7,
+      },
+      {
+        name: 'Trivy',
+        level: 7,
+      },
+      {
+        name: 'Swagger API',
+        level: 7,
+      },
+      {
+        name: 'Dependency track',
+        level: 9,
       },
     ],
   },
@@ -317,22 +340,43 @@ export const portfolioItems: PortfolioItem[] = [
     title: 'Development in medical and logistics management project',
     client: 'A medical services group in Spain offering innovative diagnostic tools to determine the best therapeutic options for patients with cancer.',
     description: 'Development and enhancement of functionalities in a medical management system. The project involved the design of both back-end and front-end solutions, with a strong focus on security, efficiency, and user experience.',
-    url: 'https://reactresume.com',
-    image: porfolioImage1,
-  },
-  {
-    title: 'Project title 2',
-    client: '',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    url: 'https://www.reveal-genomics.com/',
     image: porfolioImage2,
   },
   {
-    title: 'Project title 3',
-    client: '',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'Application for the management of film locations and projects',
+    client: 'Company dedicated to the search of film locations.',
+    description: 'Web platform for location management and film projects with advanced management, mapping and collaboration features. Project in active development with continuous improvements in user interface, location management features and user experience.',
+    url: 'https://scoutters.com/',
     image: porfolioImage3,
+  },
+  {
+    title: 'Internal Projects',
+    client: 'Versionator, to find an open-source solution with a front-end that would allow us to monitor updates and vulnerabilities of the packages used in various projects.',
+    description: '',
+    url: '#portfolio',
+    image: porfolioImage4,
+  },
+  {
+    title: 'Internal Projects',
+    client: 'Tools Research, the goal was to identify a tool that could automatically generate an API from a database.',
+    description: '',
+    url: '#portfolio',
+    image: porfolioImage5,
+  },
+  {
+    title: 'Internal Projects',
+    client: 'Lightning, platform created to share knowledge and news in the world of technology.',
+    description: '',
+    url: 'https://lightnings.apsl.net/',
+    image: porfolioImage6,
+  },
+  {
+    title: 'Internal Projects',
+    client: 'HotChair, a project which goal is to offer companies a user-friendly app to make workspace reservations.',
+    description: '',
+    url: 'https://hotchair.es/',
+    image: porfolioImage7,
   },
 ];
 
@@ -356,30 +400,28 @@ export const education: TimelineItem[] = [
 
 export const experience: TimelineItem[] = [
   {
-    date: 'October 2010 - Present',
+    date: 'October 2022 - Present',
     location: 'APSL a Nagarro Company',
     title: 'Junior Backend Web Developer',
     content: (
-      <div suppressHydrationWarning>
+      <>
         Design and development of efficient, secure and scalable solutions, combining full-stack programming skills with experience in agile methodologies.
         <ul>
-          <li>Featured projects:</li>
+          <li><strong>Featured projects:</strong></li>
           <ul>
             <li>- Medical and logistics management: development of advanced functionalities such as secure authentication (OTP tokens, password validators), optimized administrative interfaces and automatic generation of identifiers. Improved user experience through SCSS and visual components. Multi-region support and administrator management. Technology: Python (Django), PostgreSQL, JavaScript, Docker.</li>
             <li>- Cinema location management: Platform with map integration, permissions management, file upload and image galleries. Key improvements in responsive design, performance and user management. Use of technologies such as Django REST Framework, PostgreSQL (PostGIS), Redis and Bootstrap.</li>
           </ul>
         </ul>
-        <p>
-        </p>
         <ul>
-          <li>Internal projects:</li>
+          <li><strong>Internal projects:</strong></li>
           <ul>
-            <li>- Tool to monitor updates and vulnerabilities in projects.</li>
-            <li>- Platform for educational videos on web development and technology.</li>
-            <li>- Workspace reservation application.</li>
+            <li>- Tool to monitor updates and vulnerabilities in projects (Docker).</li>
+            <li>- Platform for educational videos on web development and technology (Django).</li>
+            <li>- Workspace reservation application (Django).</li>
           </ul>
         </ul>
-      </div>
+      </>
     ),
   },
   {
