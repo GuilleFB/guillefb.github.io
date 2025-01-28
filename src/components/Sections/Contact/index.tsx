@@ -10,6 +10,8 @@ import GithubIcon from '../../Icon/GithubIcon';
 import InstagramIcon from '../../Icon/InstagramIcon';
 import LinkedInIcon from '../../Icon/LinkedInIcon';
 import TwitterIcon from '../../Icon/TwitterIcon';
+import ResearchGateIcon from '../../Icon/ResearchGateIcon';
+import OrcidIcon from '../../Icon/OrcidIcon';
 import Section from '../../Layout/Section';
 // import ContactForm from './ContactForm';
 
@@ -22,6 +24,8 @@ const ContactValueMap: Record<ContactType, ContactValue> = {
   [ContactType.Facebook]: {Icon: FacebookIcon, srLabel: 'Facebook'},
   [ContactType.Twitter]: {Icon: TwitterIcon, srLabel: 'Twitter'},
   [ContactType.Instagram]: {Icon: InstagramIcon, srLabel: 'Instagram'},
+  [ContactType.ResearchGate]: {Icon: ResearchGateIcon, srLabel: 'ResearchGate'},
+  [ContactType.Orcid]: {Icon: OrcidIcon, srLabel: 'Orcid'},
 };
 
 const Contact: FC = memo(() => {
