@@ -14,7 +14,8 @@ import GithubIcon from '../components/Icon/GithubIcon';
 // import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 // import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
-// import TwitterIcon from '../components/Icon/TwitterIcon';
+import ResearchGateIcon from '../components/Icon/ResearchGateIcon';
+import OrcidIcon from '../components/Icon/OrcidIcon';
 import heroImage from '../images/header-background.webp';
 // import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
 import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
@@ -442,16 +443,38 @@ export const experience: TimelineItem[] = [
     location: 'APSL a Nagarro Company',
     title: 'Junior Backend Web Developer',
     content: (
-      <>
-        Design and development of efficient, secure and scalable solutions, combining full-stack programming skills with experience in agile methodologies.
-        In my current role, I design and develop efficient, secure, and scalable solutions using full-stack programming skills and agile methodologies. 
-        I have led the implementation of advanced features, including secure authentication systems (OTP tokens, password validators), optimized admin interfaces, and automated ID generation. 
-        Notable achievements include enhancing user experience through responsive design, SCSS styling, and reusable components, as well as integrating interactive maps, file uploads, and image galleries.
-        I also implemented multi-region support and robust permission management systems for administrators, ensuring seamless platform operation across geographies. 
-        Key technologies I work with include Django, Django REST Framework, PostgreSQL (with PostGIS), Redis, Docker, and Bootstrap. 
-        These efforts have significantly improved platform performance, security, and usability, while ensuring scalability for future growth. 
-        My focus on delivering high-quality, user-centric solutions has consistently driven positive outcomes for both users and stakeholders.
-      </>
+        <ul className="list-disc pl-5">
+          <li>
+            Design and development of <strong>efficient, secure, and scalable solutions</strong>, leveraging full-stack programming skills and agile methodologies.
+          </li>
+          <li>
+            Implementation of advanced features:
+            <ul className="list-disc pl-5">
+              <li>Secure authentication systems (2FA email and app, password validators).</li>
+              <li>Multi-region support and robust permission management.</li>
+              <li>Automated ID generation and optimized admin interfaces.</li>
+              <li>
+                Integrated Google Maps API for interactive location-based features.
+              </li>
+              <li>
+                Implemented PDF rendering with digital signature support to enhance document security.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Enhanced user experience through:
+            <ul className="list-disc pl-5">
+              <li>Responsive design and CSS styling.</li>
+              <li>Reusable components, interactive maps, file uploads, and image galleries.</li>
+            </ul>
+          </li>
+          <li>
+            Key technologies: <strong>Django, Django REST Framework, PostgreSQL (PostGIS), Redis, Docker, and Bootstrap</strong>.
+          </li>
+          <li>
+            Focused on delivering high-quality, user-centric solutions, improving <strong>performance, security, and scalability</strong>.
+          </li>
+        </ul>
     ),
   },
   {
@@ -459,23 +482,29 @@ export const experience: TimelineItem[] = [
     location: 'Spanish Institute of Oceanography',
     title: 'Technical Specialist',
     content: (
-      <>
-        <strong>Database Development & Marine Spatial Planning Expertise</strong> In my previous role, I spearheaded the development, maintenance, and analysis of Spain's allochthonous species database, 
-        integrating data from international sources (GBIF, WORMS, FishBase, AlgaeBase) via APIs, web scraping (R, Python), and field 
-        campaigns aboard oceanographic vessels. This required meticulous validation to ensure data accuracy and interoperability, often 
-        under tight deadlines for critical scientific reports.
-        A key achievement was leading the cumulative impact assessment for marine spatial planning (MSP) in the Western Mediterranean. 
-        I designed data-driven scenarios using GIS tools (QGIS/ArcGIS), R, Python, and PostgreSQL, and authored technical reports to 
-        guide cross-border policy recommendations. 
-        This involved coordinating with EU Member States, third countries, and stakeholders to align spatial uses (e.g., fisheries, conservation zones) 
-        with regulatory frameworks—a process demanding adaptability and consensus-building under pressure.
-        I also contributed to the MSPMED project, managing activities, drafting scientific publications, and supporting budget oversight. 
-        My ability to balance competing priorities—such as synthesizing data for high-stakes reports while organizing multi-national workshops—proved critical to meeting project milestones. <strong>Technical Skills & Outcomes:</strong> Proficient 
-        in data automation (R, Python scripts), spatial analysis (GIS), and database management (PostgreSQL).
-        Experienced in translating complex datasets into actionable insights for policymakers.
-        Published research in peer-reviewed journals, enhancing the project's academic impact.
-        Working in fast-paced, multidisciplinary environments honed my resilience and time-management skills, particularly during offshore campaigns or urgent deliverables for EU-funded initiatives.
-      </>
+      <ul className="list-disc pl-5">
+        <li>
+          Led the development, maintenance, and analysis of Spain's allochthonous species database, integrating data from international sources (<strong>GBIF, WORMS, FishBase, AlgaeBase</strong>) via APIs, web scraping (<strong>R, Python</strong>), and field campaigns.
+        </li>
+        <li>
+          Spearheaded cumulative impact assessments for <strong>Marine Spatial Planning (MSP)</strong> in the Western Mediterranean, designing data-driven scenarios using <strong>QGIS, ArcGIS, R, Python, and PostgreSQL</strong>.
+        </li>
+        <li>
+          Coordinated cross-border policy recommendations, aligning spatial uses (<strong>fisheries, conservation zones</strong>) with regulatory frameworks in collaboration with EU Member States and stakeholders.
+        </li>
+        <li>
+          Managed activities for the <strong>MSPMED project</strong>, contributing to scientific publications, budget oversight, and multinational workshops.
+        </li>
+        <li>
+          Technical skills: <strong>Data automation (R, Python), GIS-based spatial analysis, and PostgreSQL database management</strong>.
+        </li>
+        <li>
+          Published research in peer-reviewed journals, enhancing academic impact and supporting evidence-based policy decisions.
+        </li>
+        <li>
+          Developed resilience and time-management skills in fast-paced, multidisciplinary environments, particularly during offshore campaigns and high-stakes EU-funded initiatives.
+        </li>
+      </ul>
     ),
   },
 ];
@@ -544,4 +573,6 @@ export const socialLinks: Social[] = [
   {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/guillefb/'},
   // {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/reactresume/'},
   // {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/TimBakerx'},
+  {label: 'ResearchGate', Icon: ResearchGateIcon, href: 'https://www.researchgate.net/profile/Guillermo-Follana-Berna'},
+  {label: 'Orcid', Icon: OrcidIcon, href: 'https://orcid.org/0000-0001-9314-6567'},
 ];

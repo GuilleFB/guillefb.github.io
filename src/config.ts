@@ -3,4 +3,4 @@ export const isMobile = isBrowser ? window.matchMedia('(pointer: coarse)').match
 export const canUseDOM: boolean =
   typeof window !== 'undefined' &&
   window.document?.createElement !== undefined;
-export const isApple: boolean = canUseDOM && /Mac|iPod|iPhone|iPad/.test(navigator.platform);
+export const isApple: boolean = canUseDOM && /Mac|iPod|iPhone|iPad/.test(navigator.userAgent);
