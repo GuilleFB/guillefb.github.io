@@ -2,13 +2,21 @@
   "about": {
     "title": "About me",
     "description": [
-        "I am a motivated Junior Backend Web Developer with a robust background in Natural Sciences (PhD in Marine Ecology) and a strong passion for technology and data analysis. Over ",
+        "I am a motivated Junior Backend Web Developer with a robust background in Natural Sciences (PhD Marine Ecology) and a strong passion for technology and data analysis. Over ",
         " years of professional experience in backend development using Python and Django, complemented by a solid foundation in statistical analysis and database management. Proactive and self-taught, proficient in R and Python, seeking new challenges in data analysis and science beyond natural sciences. I believe I have made a good transition to web application development, which demonstrates my ability to adapt and learn new technologies, applying knowledge in a new discipline."
     ],
     "quotes": [
       "'Be curious. Read widely. Try new things. What people call intelligence simply is curiosity.' (Aaron Swartz)",
       "'Live as if you were going to die tomorrow. Learn as if you will live forever.' (Mahatma Gandhi)"
     ],
+    "items_title": {
+      "location": "Location",
+      "age": "Age",
+      "nationality": "Nationality",
+      "interests": "Interests",
+      "employment": "Employment",
+      "studies": "Studies"
+    },
     "items": {
       "location": "Inca, Palma de Mallorca",
       "nationality": "Spanish",
@@ -34,5 +42,111 @@
         "Resume",
         "Contact"
     ]
+  },
+  "skills": {
+    "title": "Skills",
+    "name": [
+        "Languages", 
+        "Programming Languages", 
+        "Frameworks and Libraries", 
+        "Web Technologies", 
+        "Tools and Platforms", 
+        "Databases"
+    ],
+    "skill_language_name":[
+        "Spanish",
+        "Catalan",
+        "English"
+    ]
+  },
+  "portfolio": [
+    {
+      "title": "Development in medical and logistics management project",
+      "client": "A medical services group in Spain offering innovative diagnostic tools to determine the best therapeutic options for patients with cancer.",
+      "description": "Development and enhancement of functionalities in a medical management system. The project involved the design of both back-end and front-end solutions, with a strong focus on security, efficiency, and user experience.",
+      "url": "https://www.reveal-genomics.com/"
+    },
+    {
+      "title": "Application for the management of film locations and projects",
+      "client": "Company dedicated to the search of film locations.",
+      "description": "Web platform for location management and film projects with advanced management, mapping and collaboration features. Project in active development with continuous improvements in user interface, location management features and user experience.",
+      "url": "https://scoutters.com/"
+    },
+    {
+      "title": "Internal Projects",
+      "client": "Versionator, to find an open-source solution with a front-end that would allow us to monitor updates and vulnerabilities of the packages used in various projects.",
+      "description": "",
+      "url": "#portfolio"
+    },
+    {
+      "title": "Internal Projects",
+      "client": "Tools Research, the goal was to identify a tool that could automatically generate an API from a database.",
+      "description": "",
+      "url": "#portfolio"
+    },
+    {
+      "title": "Internal Projects",
+      "client": "Lightning, platform created to share knowledge and news in the world of technology.",
+      "description": "",
+      "url": "https://lightnings.apsl.net/"
+    },
+    {
+      "title": "Internal Projects",
+      "client": "HotChair, a project which goal is to offer companies a user-friendly app to make workspace reservations.",
+      "description": "",
+      "url": "https://hotchair.es/"
+    }
+  ],
+  "porfolio_title": "Check out some of my work",
+  "work": [
+      {
+        "date": "October 2022 - Present",
+        "location": "APSL a Nagarro Company",
+        "title": "Junior Backend Web Developer",
+        "content": [
+          "Design and development of efficient, secure, and scalable solutions, leveraging full-stack programming skills and agile methodologies.",
+          "Implementation of advanced features:",
+          [
+            "Secure authentication systems (2FA email and app, password validators).",
+            "Multi-region support and robust permission management.",
+            "Automated ID generation and optimized admin interfaces.",
+            "Integrated Google Maps API for interactive location-based features.",
+            "Implemented PDF rendering with digital signature support to enhance document security."
+          ],
+          "Enhanced user experience through:",
+          [
+            "Responsive design and CSS styling.",
+            "Reusable components, interactive maps, file uploads, and image galleries."
+          ],
+          "Key technologies: Django, Django REST Framework, PostgreSQL (PostGIS), Redis, Docker, and Bootstrap.",
+          "Focused on delivering high-quality, user-centric solutions, improving performance, security, and scalability."
+        ]
+      },
+      {
+        "date": "November 2020 - October 2022",
+        "location": "Spanish Institute of Oceanography",
+        "title": "Technical Specialist",
+        "content": [
+          "Led the development, maintenance, and analysis of Spain's allochthonous species database, integrating data from international sources (GBIF, WORMS, FishBase, AlgaeBase) via APIs, web scraping (R, Python), and field campaigns.",
+          "Spearheaded cumulative impact assessments for Marine Spatial Planning (MSP) in the Western Mediterranean, designing data-driven scenarios using:",
+          [
+            "QGIS",
+            "ArcGIS",
+            "R",
+            "Python",
+            "PostgreSQL"
+          ],
+          "Coordinated cross-border policy recommendations, aligning spatial uses (fisheries, conservation zones) with regulatory frameworks in collaboration with EU Member States and stakeholders.",
+          "Managed activities for the MSPMED project, contributing to scientific publications, budget oversight, and multinational workshops.",
+          "Technical skills:",
+          [
+            "Data automation (R, Python)",
+            "GIS-based spatial analysis",
+            "PostgreSQL database management"
+          ],
+          "Published research in peer-reviewed journals, enhancing academic impact and supporting evidence-based policy decisions.",
+          "Developed resilience and time-management skills in fast-paced, multidisciplinary environments, particularly during offshore campaigns and high-stakes EU-funded initiatives."
+        ]
+      }
+    ]
   }
-}

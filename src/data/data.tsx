@@ -161,11 +161,11 @@ export const useAboutData = (): About => {
       </>
     ),
     aboutItems: [
-      { label: 'Location', text: t('about.items.location'), Icon: MapIcon },
-      { label: 'Age', text: <AgeCalculator />, Icon: CalendarIcon },
-      { label: 'Nationality', text: t('about.items.nationality'), Icon: FlagIcon },
-      { label: 'Interests', text: t('about.items.interests'), Icon: SparklesIcon },
-      { label: 'Study', text: <>
+      { label: t('about.items_title.location'), text: t('about.items.location'), Icon: MapIcon },
+      { label: t('about.items_title.age'), text: <AgeCalculator />, Icon: CalendarIcon },
+      { label: t('about.items_title.nationality'), text: t('about.items.nationality'), Icon: FlagIcon },
+      { label: t('about.items_title.interests'), text: t('about.items.interests'), Icon: SparklesIcon },
+      { label: t('about.items_title.studies'), text: <>
                                 <p>
                                 {t('about.studies.0')}
                                 </p>
@@ -177,7 +177,7 @@ export const useAboutData = (): About => {
                                 </p>
                                 </>, 
                                 Icon: AcademicCapIcon },
-      { label: 'Employment', text: t('about.items.employment'), Icon: BuildingOffice2Icon },
+      { label: t('about.items_title.employment'), text: t('about.items.employment'), Icon: BuildingOffice2Icon },
     ],
   };
 };
@@ -186,230 +186,95 @@ export const useAboutData = (): About => {
 /**
  * Skills section
  */
-export const skills: SkillGroup[] = [
-  {
-    name: 'Spoken languages',
-    skills: [
-      {
-        name: 'Spanish',
-        level: 10,
-      },
-      {
-        name: 'Catalan',
-        level: 8,
-      },
-      {
-        name: 'English',
-        level: 7,
-      },
-    ],
-  },
-  {
-    name: 'Programming Languages',
-    skills: [
-      {
-        name: 'R',
-        level: 9,
-      },
-      {
-        name: 'Python',
-        level: 9,
-      },
-      {
-        name: 'Javascript',
-        level: 6,
-      },
-      {
-        name: 'SQL',
-        level: 6,
-      },
-      {
-        name: 'Bash',
-        level: 5,
-      },
-      {
-        name: 'Go',
-        level: 4,
-      },
-      {
-        name: 'LaTeX',
-        level: 8,
-      },
-      {
-        name: 'Markdown',
-        level: 8,
-      },
-    ],
-  },
-  {
-    name: 'Frameworks and Libraries',
-    skills: [
-      {
-        name: 'Django',
-        level: 8,
-      },
-      {
-        name: 'Flask',
-        level: 6,
-      },
-      {
-        name: 'FastAPI',
-        level: 7,
-      },
-      {
-        name: 'React',
-        level: 6,
-      },
-    ],
-  },
-  {
-    name: 'Web Technologies',
-    skills: [
-      {
-        name: 'REST API',
-        level: 8,
-      },
-      {
-        name: 'JSON',
-        level: 8,
-      },
-      {
-        name: 'Google APIs (Maps, Gmail, YouTube, Calendar)',
-        level: 6,
-      },
-      {
-        name: 'CSS',
-        level: 6,
-      },
-      {
-        name: 'HTML',
-        level: 6,
-      },
-      {
-        name: 'AJAX',
-        level: 6,
-      },
-      {
-        name: 'XML',
-        level: 6,
-      },
-      {
-        name: 'Bootstrap',
-        level: 6,
-      },
-    ],
-  },
-  {
-    name: 'Tools and platforms',
-    skills: [
-      {
-        name: 'GitHub',
-        level: 9,
-      },
-      {
-        name: 'GitLab',
-        level: 9,
-      },
-      {
-        name: 'Docker',
-        level: 7,
-      },
-      {
-        name: 'Redmine',
-        level: 6,
-      },
-      {
-        name: 'JIRA',
-        level: 5,
-      },
-      {
-        name: 'Visual Studio Code',
-        level: 8,
-      },
-      {
-        name: 'Zulip',
-        level: 7,
-      },
-      {
-        name: 'Trivy',
-        level: 7,
-      },
-      {
-        name: 'Swagger API',
-        level: 7,
-      },
-      {
-        name: 'Dependency track',
-        level: 9,
-      },
-    ],
-  },
-  {
-    name: 'Database',
-    skills: [
-      {
-        name: 'PostgreSQL',
-        level: 9,
-      },
-      {
-        name: 'Redis',
-        level: 5,
-      },
-            {
-        name: 'Mongo',
-        level: 4,
-      },
-    ],
-  },
-];
+export const useSkills = (): SkillGroup[] => {
+  const { t } = useTranslation();
 
+  return [
+    {
+      name: t('skills.name.0'),
+      skills: [
+        { name: t('skills.skill_language_name.0'), level: 10 },
+        { name: t('skills.skill_language_name.1'), level: 8 },
+        { name: t('skills.skill_language_name.2'), level: 7 },
+      ],
+    },
+    {
+      name: t('skills.name.1'),
+      skills: [
+        { name: 'R', level: 9 },
+        { name: 'Python', level: 9 },
+        { name: 'Javascript', level: 6 },
+        { name: 'SQL', level: 6 },
+        { name: 'Bash', level: 5 },
+        { name: 'Go', level: 4 },
+        { name: 'LaTeX', level: 8 },
+        { name: 'Markdown', level: 8 },
+      ],
+    },
+    {
+      name: t('skills.name.2'),
+      skills: [
+        { name: 'Django', level: 8 },
+        { name: 'Flask', level: 6 },
+        { name: 'FastAPI', level: 7 },
+        { name: 'React', level: 6 },
+      ],
+    },
+    {
+      name: t('skills.name.3'),
+      skills: [
+        { name: 'REST API', level: 8 },
+        { name: 'JSON', level: 8 },
+        { name: 'Google APIs (Maps, Gmail, YouTube, Calendar)', level: 6 },
+        { name: 'CSS', level: 6 },
+        { name: 'HTML', level: 6 },
+        { name: 'AJAX', level: 6 },
+        { name: 'XML', level: 6 },
+        { name: 'Bootstrap', level: 6 },
+      ],
+    },
+    {
+      name: t('skills.name.4'),
+      skills: [
+        { name: 'GitHub', level: 9 },
+        { name: 'GitLab', level: 9 },
+        { name: 'Docker', level: 7 },
+        { name: 'Redmine', level: 6 },
+        { name: 'JIRA', level: 5 },
+        { name: 'Visual Studio Code', level: 8 },
+        { name: 'Zulip', level: 7 },
+        { name: 'Trivy', level: 7 },
+        { name: 'Swagger API', level: 7 },
+        { name: 'Dependency track', level: 9 },
+      ],
+    },
+    {
+      name: t('skills.name.5'),
+      skills: [
+        { name: 'PostgreSQL', level: 9 },
+        { name: 'Redis', level: 5 },
+        { name: 'Mongo', level: 4 },
+      ],
+    },
+  ];
+};
 /**
  * Portfolio section
  */
-export const portfolioItems: PortfolioItem[] = [
-  {
-    title: 'Development in medical and logistics management project',
-    client: 'A medical services group in Spain offering innovative diagnostic tools to determine the best therapeutic options for patients with cancer.',
-    description: 'Development and enhancement of functionalities in a medical management system. The project involved the design of both back-end and front-end solutions, with a strong focus on security, efficiency, and user experience.',
-    url: 'https://www.reveal-genomics.com/',
-    image: porfolioImage2,
-  },
-  {
-    title: 'Application for the management of film locations and projects',
-    client: 'Company dedicated to the search of film locations.',
-    description: 'Web platform for location management and film projects with advanced management, mapping and collaboration features. Project in active development with continuous improvements in user interface, location management features and user experience.',
-    url: 'https://scoutters.com/',
-    image: porfolioImage3,
-  },
-  {
-    title: 'Internal Projects',
-    client: 'Versionator, to find an open-source solution with a front-end that would allow us to monitor updates and vulnerabilities of the packages used in various projects.',
-    description: '',
-    url: '#portfolio',
-    image: porfolioImage4,
-  },
-  {
-    title: 'Internal Projects',
-    client: 'Tools Research, the goal was to identify a tool that could automatically generate an API from a database.',
-    description: '',
-    url: '#portfolio',
-    image: porfolioImage5,
-  },
-  {
-    title: 'Internal Projects',
-    client: 'Lightning, platform created to share knowledge and news in the world of technology.',
-    description: '',
-    url: 'https://lightnings.apsl.net/',
-    image: porfolioImage6,
-  },
-  {
-    title: 'Internal Projects',
-    client: 'HotChair, a project which goal is to offer companies a user-friendly app to make workspace reservations.',
-    description: '',
-    url: 'https://hotchair.es/',
-    image: porfolioImage7,
-  },
-];
+const images = [porfolioImage2, porfolioImage3, porfolioImage4, porfolioImage5, porfolioImage6, porfolioImage7];
+
+export const usePortfolioItems = (): PortfolioItem[] => {
+  const { t } = useTranslation();
+  const projects = t('portfolio', { returnObjects: true }) as Array<any>;
+
+  return projects.map((project, index) => ({
+    title: project.title || '',
+    client: project.client || '',
+    description: project.description || '',
+    url: project.url || '#',
+    image: images[index] || images[0],
+  }));
+};
 
 /**
  * Resume section
