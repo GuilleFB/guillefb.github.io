@@ -42,6 +42,7 @@ import {
   TestimonialSection,
   TimelineItem,
 } from './dataDef';
+import { useTranslation } from 'react-i18next';
 
 /**
  * Page meta data
@@ -70,35 +71,39 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
 /**
  * Hero section
  */
-export const heroData: Hero = {
-  imageSrc: heroImage,
-  name: `Hello, I'm Guillermo Follana Berná`,
-  description: (
-    <>
-      <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Palma de Mallorca based <strong className="text-stone-100">Backend Software Engineer</strong>, currently working
-        at <strong className="text-stone-100"><a href="https://apsl.tech/">APSL a Nagarro Company</a></strong>.
-      </p>
-      <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time you can find me with my little daughter, going to the beach in summer, hiking in winter, reading about history in general, monetary history in particular, technology and/or philosophy.
-      </p>
-    </>
-  ),
-  actions: [
-    {
-      href: '/#resume',
-      text: 'Resume',
-      primary: true,
-      Icon: BookOpenIcon,
-    },
-    {
-      href: `#${SectionId.Contact}`,
-      text: 'Contact',
-      primary: false,
-      Icon: ChatBubbleBottomCenterTextIcon,
-    },
-  ],
-};
+export const useHeroData = (): Hero => {
+  const { t } = useTranslation();
+
+  return {
+    imageSrc: heroImage,
+    name: t('hero.name'),
+    description: (
+      <>
+        <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
+          {t('hero.description.0')}<strong className="text-stone-100">{t('hero.description.1')}</strong>{t('hero.description.2')}
+          <strong className="text-stone-100"><a href="https://apsl.tech/">{t('hero.description.3')}</a></strong>.
+        </p>
+        <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
+          {t('hero.description.4')}
+        </p>
+      </>
+    ),
+    actions: [
+      {
+        href: '/#resume',
+        text: t('hero.actions.0'),
+        primary: true,
+        Icon: BookOpenIcon,
+      },
+      {
+        href: `#${SectionId.Contact}`,
+        text: t('hero.actions.1'),
+        primary: false,
+        Icon: ChatBubbleBottomCenterTextIcon,
+      },
+    ],
+  };
+}
 
 /**
  * About section
@@ -141,43 +146,42 @@ const Experience = () => {
   return <span>{years}</span>;
 };
 
-export const aboutData: About = {
-  profileImageSrc: profilepic,
-  description: (
-    <>
-        I am a motivated Junior Backend Web Developer with a robust background in Natural Sciences 
-        (PhD in Marine Ecology) and a strong passion for technology and data analysis. Over <Experience/> years of 
-        professional experience in backend development using Python and Django, complemented by a solid 
-        foundation in statistical analysis and database management. Proactive and self-taught, proficient 
-        in R and Python, seeking new challenges in data analysis and science beyond natural sciences. I 
-        believe I have made a good transition to web application development, which demonstrates my ability 
-        to adapt and learn new technologies, applying knowledge in a new discipline.
-        <p></p>
-        "Be curious. Read widely. Try new things. What people call intelligence simply is curiosity." (Aaron Swartz)
-        <p></p>
-        "Live as if you were going to die tomorrow. Learn as if you will live forever." (Mahatma Gandhi)
-    </>
-  ),
-  aboutItems: [
-    { label: 'Location', text: 'Inca, Palma de Mallorca', Icon: MapIcon },
-    { label: 'Age', text: <AgeCalculator />, Icon: CalendarIcon },
-    { label: 'Nationality', text: 'Spanish', Icon: FlagIcon },
-    { label: 'Interests', text: 'Diving, IoT, Read, Beach, Hiking', Icon: SparklesIcon },
-    { label: 'Study', text: <>
-                              <p>
-                              University of Alicante (Degree Marine Science)
-                              </p>
-                              <p>
-                              University of Murcia (Master Fisheries Research)
-                              </p>
-                              <p>
-                              University of Islas Baleares (PhD Marine Ecology)
-                              </p>
-                              </>, 
-                              Icon: AcademicCapIcon },
-    { label: 'Employment', text: 'APSL a Nagarro Company', Icon: BuildingOffice2Icon },
-  ],
+export const useAboutData = (): About => {
+  const { t } = useTranslation();
+
+  return {
+    profileImageSrc: profilepic,
+    description: (
+      <>
+          {t('about.description.0')} <Experience/> {t('about.description.1')}
+          <p></p>
+          {t('about.quotes.0')}
+          <p></p>
+          {t('about.quotes.1')}
+      </>
+    ),
+    aboutItems: [
+      { label: 'Location', text: t('about.items.location'), Icon: MapIcon },
+      { label: 'Age', text: <AgeCalculator />, Icon: CalendarIcon },
+      { label: 'Nationality', text: t('about.items.nationality'), Icon: FlagIcon },
+      { label: 'Interests', text: t('about.items.interests'), Icon: SparklesIcon },
+      { label: 'Study', text: <>
+                                <p>
+                                {t('about.studies.0')}
+                                </p>
+                                <p>
+                                {t('about.studies.1')}
+                                </p>
+                                <p>
+                                {t('about.studies.2')}
+                                </p>
+                                </>, 
+                                Icon: AcademicCapIcon },
+      { label: 'Employment', text: t('about.items.employment'), Icon: BuildingOffice2Icon },
+    ],
+  };
 };
+  
 
 /**
  * Skills section

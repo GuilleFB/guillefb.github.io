@@ -1,0 +1,38 @@
+{
+  "about": {
+    "title": "Sobre mi",
+    "description": [
+        "Soy un motivado Desarrollador Web Junior Backend con una sólida formación en Ciencias Naturales (Doctorado en Ecología Marina) y una fuerte pasión por la tecnología y el análisis de datos. Mas de ",
+        " años de experiencia profesional en desarrollo backend usando Python y Django, complementado con una sólida base en análisis estadístico y gestión de bases de datos. Proactivo y autodidacta, competente en R y Python, en busca de nuevos retos en el desarrollo de aplicaciones y análisis de datos que generen un impacto en la vida de las personas. Creo que he hecho una buena transición al desarrollo de aplicaciones web, lo que demuestra mi capacidad para adaptarme y aprender nuevas tecnologías, aplicando conocimientos en una nueva disciplina."
+    ],
+    "quotes": [
+      "'Sea curioso. Lee mucho. Prueba cosas nuevas. Lo que la gente llama inteligencia es simplemente curiosidad.' (Aaron Swartz)",
+      "'Vive como si fueras a morir mañana. Aprende como si fueras a vivir para siempre.' (Mahatma Gandhi)"
+    ],
+    "items": {
+      "location": "Inca, Palma de Mallorca",
+      "nationality": "Español",
+      "interests": "Buceo, IoT, Leer, Playa, Senderismo",
+      "employment": "APSL a Nagarro Company"
+    },
+    "studies": [
+      "Universidad de Alicante (Licenciado en Ciencias del Mar)",
+      "Universidad de Murcia (Master en Gestion de Recursos Pesqueros)",
+      "Universidad de Islas Baleares (Doctor en Ecología Marina)"
+    ]
+  },
+  "hero": {
+    "name": "Hola, soy Guillermo Follana Berná",
+    "description": [
+        "Soy un ",
+        "Ingeniero de Software Backend",
+        ", asentado en Palma de Mallorca y actualmente trabajando en ",
+        "APSL a Nagarro Company",
+        "En mi tiempo libre puedes encontrarme disfrutando con mi hija pequeña, yendo a la playa en verano, haciendo senderismo en invierno, leyendo sobre historia en general, historia monetaria en particular, tecnología y/o filosofía."
+    ],
+    "actions": [
+        "Currículum",
+        "Contacto"
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "about": {
+    "title": "About me",
+    "description": [
+        "I am a motivated Junior Backend Web Developer with a robust background in Natural Sciences (PhD in Marine Ecology) and a strong passion for technology and data analysis. Over ",
+        " years of professional experience in backend development using Python and Django, complemented by a solid foundation in statistical analysis and database management. Proactive and self-taught, proficient in R and Python, seeking new challenges in data analysis and science beyond natural sciences. I believe I have made a good transition to web application development, which demonstrates my ability to adapt and learn new technologies, applying knowledge in a new discipline."
+    ],
+    "quotes": [
+      "'Be curious. Read widely. Try new things. What people call intelligence simply is curiosity.' (Aaron Swartz)",
+      "'Live as if you were going to die tomorrow. Learn as if you will live forever.' (Mahatma Gandhi)"
+    ],
+    "items": {
+      "location": "Inca, Palma de Mallorca",
+      "nationality": "Spanish",
+      "interests": "Diving, IoT, Read, Beach, Hiking",
+      "employment": "APSL a Nagarro Company"
+    },
+    "studies": [
+      "University of Alicante (Degree Marine Science)",
+      "University of Murcia (Master Fisheries Research)",
+      "University of Islas Baleares (PhD Marine Ecology)"
+    ]
+  },
+  "hero": {
+    "name": "Hello, I'm Guillermo Follana Berná",
+    "description": [
+        "I'm a Palma de Mallorca based ",
+        "Backend Software Engineer",
+        ", currently working at ",
+        "APSL a Nagarro Company",
+        "In my free time you can find me enjoying time with my young daughter, going to the beach in summer, hiking in winter, reading about history in general, monetary history in particular, technology and/or philosophy."
+    ],
+    "actions": [
+        "Resume",
+        "Contact"
+    ]
+  }
+}

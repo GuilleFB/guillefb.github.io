@@ -2,7 +2,7 @@ import '../globalStyles.scss'; // Importa solo tu archivo SCSS
 import type { AppProps } from 'next/app';
 import { memo, JSX, useEffect } from 'react';
 import TagManager from 'react-gtm-module';
-
+import '../i18n';
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics, logEvent, Analytics } from "firebase/analytics";

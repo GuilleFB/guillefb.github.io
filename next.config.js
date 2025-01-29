@@ -1,7 +1,10 @@
 /* eslint-env node */
 
+const { i18n } = require("next-i18next");
+
 // https://github.com/vercel/next.js/blob/master/packages/next/next-server/server/config.ts
 const nextConfig = {
+  i18n,
   webpack: config => {
     const oneOfRule = config.module.rules.find(rule => rule.oneOf);
 

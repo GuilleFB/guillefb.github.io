@@ -8,6 +8,7 @@ import {SectionId} from '../../data/data';
 import {useNavObserver} from '../../hooks/useNavObserver';
 
 export const headerID = 'headerNav';
+import LanguageSwitcher from './LanguageSwitch';
 
 const Header: FC = memo(() => {
   const [currentSection, setCurrentSection] = useState<SectionId | null>(null);
@@ -52,6 +53,7 @@ const DesktopNav: FC<{navSections: SectionId[]; currentSection: SectionId | null
               section={section}
             />
           ))}
+          <LanguageSwitcher />
         </nav>
       </header>
     );
