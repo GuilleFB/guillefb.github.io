@@ -113,6 +113,7 @@ const MobileNav: FC<{navSections: SectionId[]; currentSection: SectionId | null}
                       section={section}
                     />
                   ))}
+                  <LanguageSwitcher onClick={toggleOpen}/>
                 </nav>
               </div>
             </TransitionChild>

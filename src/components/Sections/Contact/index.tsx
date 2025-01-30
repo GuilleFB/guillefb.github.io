@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import {FC, memo, useMemo, useEffect, useState} from 'react';
 
 import {isApple, isMobile} from '../../../config';
-import {contact, SectionId, testimonial} from '../../../data/data';
+import {useContact, SectionId, testimonial} from '../../../data/data';
 import {ContactType, ContactValue} from '../../../data/dataDef';
 import FacebookIcon from '../../Icon/FacebookIcon';
 import GithubIcon from '../../Icon/GithubIcon';
@@ -29,7 +29,7 @@ const ContactValueMap: Record<ContactType, ContactValue> = {
 };
 
 const Contact: FC = memo(() => {
-  const {headerText, description, items} = contact;
+  const {headerText, description, items} = useContact();
   const {imageSrc} = testimonial;
   const [parallaxEnabled, setParallaxEnabled] = useState(false);
 

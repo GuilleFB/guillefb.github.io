@@ -2,7 +2,7 @@
   "about": {
     "title": "Sobre mi",
     "description": [
-        "Soy Desarrollador Web Junior Backend con una sólida formación en Ciencias Naturales (Doctor en Ecología Marina) y una fuerte pasión por la tecnología y el análisis de datos. Mas de ",
+        "Soy Desarrollador Web Backend con una sólida formación en Ciencias Naturales (Doctor en Ecología Marina) y una fuerte pasión por la tecnología y el análisis de datos. Mas de ",
         " años de experiencia profesional en desarrollo backend usando Python y Django, complementado con una sólida base en análisis estadístico y gestión de bases de datos. Proactivo y autodidacta, competente en R y Python, en busca de nuevos retos en el desarrollo de aplicaciones y análisis de datos que generen un impacto en la vida de las personas. Creo que he hecho una buena transición al desarrollo de aplicaciones web, lo que demuestra mi capacidad para adaptarme y aprender nuevas tecnologías, aplicando conocimientos en una nueva disciplina."
     ],
     "quotes": [
@@ -32,11 +32,11 @@
   "hero": {
     "name": "Hola, soy Guillermo Follana Berná",
     "description": [
-        "Soy un ",
-        "Ingeniero de Software Backend",
+        "",
+        "Desarrollador Backend",
         ", asentado en Palma de Mallorca y actualmente trabajando en ",
         "APSL a Nagarro Company",
-        "En mi tiempo libre puedes encontrarme disfrutando con mi hija pequeña, yendo a la playa en verano, haciendo senderismo en invierno, leyendo sobre historia en general, historia monetaria en particular, tecnología y/o filosofía."
+        "En mi tiempo libre puedes encontrarme disfrutando con mi hija pequeña, yendo a la playa en verano, haciendo senderismo en invierno, leyendo sobre historia en general, historia monetaria en particular, tecnología o filosofía."
     ],
     "actions": [
         "Currículum",
@@ -59,6 +59,7 @@
         "Inglés"
     ]
   },
+  "porfolio_title": "Vea algunos de mis trabajos",
   "portfolio": [
     {
       "title": "Desarrollo en proyecto de gestión médica y logística",
@@ -97,38 +98,38 @@
       "url": "https://hotchair.es/"
     }
   ],
-  "porfolio_title": "Vea algunos de mis trabajos",
+  "work_title": "Trabajo",
   "work": [
     {
-      "date": "October 2022 - Present",
+      "date": "Octubre 2022 - Presente",
       "location": "APSL a Nagarro Company",
-      "title": "Junior Backend Web Developer",
+      "title": "Desarrollador web backend",
       "content": [
-        "Design and development of efficient, secure, and scalable solutions, leveraging full-stack programming skills and agile methodologies.",
-        "Implementation of advanced features:",
+        "Diseño y desarrollo de soluciones eficientes, seguras y escalables, aprovechando los conocimientos de programación full-stack y las metodologías ágiles.",
+        "Implementación de funciones avanzadas:",
         [
-          "Secure authentication systems (2FA email and app, password validators).",
-          "Multi-region support and robust permission management.",
-          "Automated ID generation and optimized admin interfaces.",
-          "Integrated Google Maps API for interactive location-based features.",
-          "Implemented PDF rendering with digital signature support to enhance document security."
+          "Sistemas de autenticación seguros (correo electrónico y aplicación 2FA, validadores de contraseñas).",
+          "Soporte multi-región y gestión de permisos robusta.",
+          "Generación de ID automatizada e interfaces de administrador optimizadas.",
+          "API de Google Maps integrada para funciones interactivas basadas en la ubicación.",
+          "Implementación de renderizado de PDF con soporte de firma digital para mejorar la seguridad de los documentos."
         ],
-        "Enhanced user experience through:",
+        "Experiencia de usuario mejorada gracias a:",
         [
-          "Responsive design and CSS styling.",
-          "Reusable components, interactive maps, file uploads, and image galleries."
+          "Diseño y estilismo CSS de diseño receptivo.",
+          "Componentes reutilizables, mapas interactivos, cargas de archivos y galerías de imágenes."
         ],
-        "Key technologies: Django, Django REST Framework, PostgreSQL (PostGIS), Redis, Docker, and Bootstrap.",
-        "Focused on delivering high-quality, user-centric solutions, improving performance, security, and scalability."
+        "Tecnologías clave: Django, Django REST Framework, PostgreSQL (PostGIS), Redis, Docker y Bootstrap.",
+        "Centrado en ofrecer soluciones de alta calidad centradas en el usuario, mejorando el rendimiento, la seguridad y la escalabilidad."
       ]
     },
     {
-      "date": "November 2020 - October 2022",
-      "location": "Spanish Institute of Oceanography",
-      "title": "Technical Specialist",
+      "date": "Noviembre 2020 - Octubre 2022",
+      "location": "Instituto Español de Oceanografía",
+      "title": "Especialista técnico",
       "content": [
-        "Led the development, maintenance, and analysis of Spain's allochthonous species database, integrating data from international sources (GBIF, WORMS, FishBase, AlgaeBase) via APIs, web scraping (R, Python), and field campaigns.",
-        "Spearheaded cumulative impact assessments for Marine Spatial Planning (MSP) in the Western Mediterranean, designing data-driven scenarios using:",
+        "Lideré el desarrollo, mantenimiento y análisis de la base de datos de especies alóctonas de España, integrando datos de fuentes internacionales (GBIF, WORMS, FishBase, AlgaeBase) a través de APIs, web scraping (R, Python) y campañas de campo.",
+        "Dirigí las evaluaciones de impacto acumulativo para la ordenación del espacio marino en el Mediterráneo occidental, diseñando escenarios basados en datos utilizando:",
         [
           "QGIS",
           "ArcGIS",
@@ -136,17 +137,48 @@
           "Python",
           "PostgreSQL"
         ],
-        "Coordinated cross-border policy recommendations, aligning spatial uses (fisheries, conservation zones) with regulatory frameworks in collaboration with EU Member States and stakeholders.",
-        "Managed activities for the MSPMED project, contributing to scientific publications, budget oversight, and multinational workshops.",
-        "Technical skills:",
+        "Recomendaciones políticas transfronterizas coordinadas, alineando los usos espaciales (pesca, zonas de conservación) con los marcos normativos en colaboración con los Estados miembros de la UE y las partes interesadas.",
+        "Gestioné las actividades del proyecto MSPMED, contribuyendo a publicaciones científicas, supervisión presupuestaria y talleres multinacionales.",
+        "Conocimientos técnicos:",
         [
-          "Data automation (R, Python)",
-          "GIS-based spatial analysis",
-          "PostgreSQL database management"
+          "Automatización de datos (R, Python)",
+          "Análisis espacial basado en SIG (QGIS, ArcGIS)",
+          "Gestión de bases de datos PostgreSQL"
         ],
-        "Published research in peer-reviewed journals, enhancing academic impact and supporting evidence-based policy decisions.",
-        "Developed resilience and time-management skills in fast-paced, multidisciplinary environments, particularly during offshore campaigns and high-stakes EU-funded initiatives."
+        "Publicación de investigaciones en revistas revisadas por pares, lo que aumenta el impacto académico y respalda las decisiones políticas basadas en pruebas.",
+        "Desarrollé la capacidad de adaptación y gestión del tiempo en entornos multidisciplinares de ritmo rápido, especialmente durante campañas de muestreo (buceo) e iniciativas financiadas por la UE con grandes riesgos."
       ]
+    }
+  ],
+  "contact": {
+    "headerText": "Póngase en contacto.",
+    "description": "Si tiene alguna pregunta o desea hablar de un proyecto, no dude en ponerse en contacto conmigo."
+  },
+  "education_title": "Educación",
+  "education": [
+    {
+      "date":"2021",
+      "location": "Universidad de las Islas Baleares",
+      "title": "Doctor en Ecología marina",
+      "content": ""
+    },
+    {
+      "date":"2014",
+      "location": "Universidad de Murcia",
+      "title": "Máster en Gestión de Recursos Pesqueros",
+      "content": ""
+    },
+    {
+      "date":"2013",
+      "location": "Universidad de Alicante",
+      "title": "Licenciado en Ciencias del Mar",
+      "content": ""
+    },
+    {
+      "date":"2011",
+      "location": "Universidad de Alicante",
+      "title": "Licenciatura en Biología",
+      "content": ""
     }
   ]
 }

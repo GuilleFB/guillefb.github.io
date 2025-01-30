@@ -16,7 +16,7 @@ import LinkedInIcon from '../components/Icon/LinkedInIcon';
 // import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
 import ResearchGateIcon from '../components/Icon/ResearchGateIcon';
 import OrcidIcon from '../components/Icon/OrcidIcon';
-import heroImage from '../images/header-background.webp';
+// import heroImage from '../images/fondo/mallorca.jpg';
 // import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
 import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
 import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
@@ -75,7 +75,7 @@ export const useHeroData = (): Hero => {
   const { t } = useTranslation();
 
   return {
-    imageSrc: heroImage,
+    // imageSrc: HeroImg(),
     name: t('hero.name'),
     description: (
       <>
@@ -103,7 +103,7 @@ export const useHeroData = (): Hero => {
       },
     ],
   };
-}
+};
 
 /**
  * About section
@@ -241,7 +241,7 @@ export const useSkills = (): SkillGroup[] => {
         { name: 'Docker', level: 7 },
         { name: 'Redmine', level: 6 },
         { name: 'JIRA', level: 5 },
-        { name: 'Visual Studio Code', level: 8 },
+        { name: 'VS Code', level: 8 },
         { name: 'Zulip', level: 7 },
         { name: 'Trivy', level: 7 },
         { name: 'Swagger API', level: 7 },
@@ -279,104 +279,99 @@ export const usePortfolioItems = (): PortfolioItem[] => {
 /**
  * Resume section
  */
-export const education: TimelineItem[] = [
-  {
-    date: '2021',
-    location: 'University of Balearic Island',
-    title: 'Doctor in Marine Ecology',
-    content: '',
-  },
-  {
-    date: '2014',
-    location: 'University of Murcia',
-    title: 'Master in Fishery Resources Management',
-    content: '',
-  },
-  {
-    date: '2013',
-    location: 'University of Alicante',
-    title: 'Marine Science Graduate',
-    content: '',
-  },
-  {
-    date: '2011',
-    location: 'University of Alicante',
-    title: 'Bachelor in Biology',
-    content: '',
-  },
-];
+export const useEducation = (): TimelineItem[] => {
+  const { t } = useTranslation();
+  const education = t('education', { returnObjects: true }) as Array<any>;
 
-export const experience: TimelineItem[] = [
-  {
-    date: 'October 2022 - Present',
-    location: 'APSL a Nagarro Company',
-    title: 'Junior Backend Web Developer',
-    content: (
-        <ul className="list-disc pl-5">
-          <li>
-            Design and development of <strong>efficient, secure, and scalable solutions</strong>, leveraging full-stack programming skills and agile methodologies.
-          </li>
-          <li>
-            Implementation of advanced features:
-            <ul className="list-disc pl-5">
-              <li>Secure authentication systems (2FA email and app, password validators).</li>
-              <li>Multi-region support and robust permission management.</li>
-              <li>Automated ID generation and optimized admin interfaces.</li>
-              <li>
-                Integrated Google Maps API for interactive location-based features.
-              </li>
-              <li>
-                Implemented PDF rendering with digital signature support to enhance document security.
-              </li>
-            </ul>
-          </li>
-          <li>
-            Enhanced user experience through:
-            <ul className="list-disc pl-5">
-              <li>Responsive design and CSS styling.</li>
-              <li>Reusable components, interactive maps, file uploads, and image galleries.</li>
-            </ul>
-          </li>
-          <li>
-            Key technologies: <strong>Django, Django REST Framework, PostgreSQL (PostGIS), Redis, Docker, and Bootstrap</strong>.
-          </li>
-          <li>
-            Focused on delivering high-quality, user-centric solutions, improving <strong>performance, security, and scalability</strong>.
-          </li>
-        </ul>
-    ),
-  },
-  {
-    date: 'November 2020 - October 2022',
-    location: 'Spanish Institute of Oceanography',
-    title: 'Technical Specialist',
-    content: (
-      <ul className="list-disc pl-5">
-        <li>
-          Led the development, maintenance, and analysis of Spain's allochthonous species database, integrating data from international sources (<strong>GBIF, WORMS, FishBase, AlgaeBase</strong>) via APIs, web scraping (<strong>R, Python</strong>), and field campaigns.
-        </li>
-        <li>
-          Spearheaded cumulative impact assessments for <strong>Marine Spatial Planning (MSP)</strong> in the Western Mediterranean, designing data-driven scenarios using <strong>QGIS, ArcGIS, R, Python, and PostgreSQL</strong>.
-        </li>
-        <li>
-          Coordinated cross-border policy recommendations, aligning spatial uses (<strong>fisheries, conservation zones</strong>) with regulatory frameworks in collaboration with EU Member States and stakeholders.
-        </li>
-        <li>
-          Managed activities for the <strong>MSPMED project</strong>, contributing to scientific publications, budget oversight, and multinational workshops.
-        </li>
-        <li>
-          Technical skills: <strong>Data automation (R, Python), GIS-based spatial analysis, and PostgreSQL database management</strong>.
-        </li>
-        <li>
-          Published research in peer-reviewed journals, enhancing academic impact and supporting evidence-based policy decisions.
-        </li>
-        <li>
-          Developed resilience and time-management skills in fast-paced, multidisciplinary environments, particularly during offshore campaigns and high-stakes EU-funded initiatives.
-        </li>
-      </ul>
-    ),
-  },
-];
+  return education.map((education) => ({
+    date: education.date || '',
+    location: education.location || '',
+    title: education.title || '',
+    content: education.content || '',
+  }));
+};
+
+export const useExperience = (): TimelineItem[] => {
+  const { t } = useTranslation();
+  const work = t('work', { returnObjects: true }) as Array<any>;
+
+  return work.map((work) => ({
+    date: work.date || '',
+    location: work.location || '',
+    title: work.title || '',
+    content: work.content || '',
+  }));
+  
+  // {
+  //   date: 'October 2022 - Present',
+  //   location: 'APSL a Nagarro Company',
+  //   title: 'Junior Backend Web Developer',
+  //   content: (
+  //       <ul className="list-disc pl-5">
+  //         <li>
+  //           Design and development of <strong>efficient, secure, and scalable solutions</strong>, leveraging full-stack programming skills and agile methodologies.
+  //         </li>
+  //         <li>
+  //           Implementation of advanced features:
+  //           <ul className="list-disc pl-5">
+  //             <li>Secure authentication systems (2FA email and app, password validators).</li>
+  //             <li>Multi-region support and robust permission management.</li>
+  //             <li>Automated ID generation and optimized admin interfaces.</li>
+  //             <li>
+  //               Integrated Google Maps API for interactive location-based features.
+  //             </li>
+  //             <li>
+  //               Implemented PDF rendering with digital signature support to enhance document security.
+  //             </li>
+  //           </ul>
+  //         </li>
+  //         <li>
+  //           Enhanced user experience through:
+  //           <ul className="list-disc pl-5">
+  //             <li>Responsive design and CSS styling.</li>
+  //             <li>Reusable components, interactive maps, file uploads, and image galleries.</li>
+  //           </ul>
+  //         </li>
+  //         <li>
+  //           Key technologies: <strong>Django, Django REST Framework, PostgreSQL (PostGIS), Redis, Docker, and Bootstrap</strong>.
+  //         </li>
+  //         <li>
+  //           Focused on delivering high-quality, user-centric solutions, improving <strong>performance, security, and scalability</strong>.
+  //         </li>
+  //       </ul>
+  //   ),
+  // },
+  // {
+  //   date: 'November 2020 - October 2022',
+  //   location: 'Spanish Institute of Oceanography',
+  //   title: 'Technical Specialist',
+  //   content: (
+  //     <ul className="list-disc pl-5">
+  //       <li>
+  //         Led the development, maintenance, and analysis of Spain's allochthonous species database, integrating data from international sources (<strong>GBIF, WORMS, FishBase, AlgaeBase</strong>) via APIs, web scraping (<strong>R, Python</strong>), and field campaigns.
+  //       </li>
+  //       <li>
+  //         Spearheaded cumulative impact assessments for <strong>Marine Spatial Planning (MSP)</strong> in the Western Mediterranean, designing data-driven scenarios using <strong>QGIS, ArcGIS, R, Python, and PostgreSQL</strong>.
+  //       </li>
+  //       <li>
+  //         Coordinated cross-border policy recommendations, aligning spatial uses (<strong>fisheries, conservation zones</strong>) with regulatory frameworks in collaboration with EU Member States and stakeholders.
+  //       </li>
+  //       <li>
+  //         Managed activities for the <strong>MSPMED project</strong>, contributing to scientific publications, budget oversight, and multinational workshops.
+  //       </li>
+  //       <li>
+  //         Technical skills: <strong>Data automation (R, Python), GIS-based spatial analysis, and PostgreSQL database management</strong>.
+  //       </li>
+  //       <li>
+  //         Published research in peer-reviewed journals, enhancing academic impact and supporting evidence-based policy decisions.
+  //       </li>
+  //       <li>
+  //         Developed resilience and time-management skills in fast-paced, multidisciplinary environments, particularly during offshore campaigns and high-stakes EU-funded initiatives.
+  //       </li>
+  //     </ul>
+  //   ),
+  // },
+};
 
 /**
  * Testimonial section
@@ -406,33 +401,35 @@ export const testimonial: TestimonialSection = {
  * Contact section
  */
 
-export const contact: ContactSection = {
-  headerText: 'Get in touch.',
-  description: 'Feel free to send me a message to contact me.',
-  items: [
-    {
-      type: ContactType.Email,
-      text: 'gfollana@gmail.com',
-      href: 'mailto:gfollana@gmail.com',
-    },
-    {
-      type: ContactType.Location,
-      text: 'Inca, Islas Baleares, Spain',
-      href: 'https://maps.app.goo.gl/ZC6JhXkMNbix8uAM7',
-    },
-    // {
-    //   type: ContactType.Instagram,
-    //   text: '@tbakerx',
-    //   href: 'https://www.instagram.com/tbakerx/',
-    // },
-    {
-      type: ContactType.Github,
-      text: 'GuilleFB',
-      href: 'https://github.com/GuilleFB',
-    },
-  ],
+export const useContact = (): ContactSection => {
+  const { t } = useTranslation();
+  return {
+    headerText: t('contact.headerText'),
+    description: t('contact.description'),
+    items: [
+      {
+        type: ContactType.Email,
+        text: 'gfollana@gmail.com',
+        href: 'mailto:gfollana@gmail.com',
+      },
+      {
+        type: ContactType.Location,
+        text: 'Inca, Islas Baleares, Spain',
+        href: 'https://maps.app.goo.gl/ZC6JhXkMNbix8uAM7',
+      },
+      {
+        type: ContactType.Github,
+        text: 'GuilleFB',
+        href: 'https://maps.app.goo.gl/ZC6JhXkMNbix8uAM7',
+      },
+      // {
+      //   type: ContactType.Instagram,
+      //   text: '@tbakerx',
+      //   href: 'https://www.instagram.com/tbakerx/',
+      // },
+    ],
+  };
 };
-
 /**
  * Social items
  */
