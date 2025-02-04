@@ -15,6 +15,8 @@
     "sitemap": "yarn next-sitemap"
   },
   "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
     "@headlessui/react": "^2.2.0",
     "@heroicons/react": "^2.0.18",
     "@types/react-gtm-module": "^2.0.4",

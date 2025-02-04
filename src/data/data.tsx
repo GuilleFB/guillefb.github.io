@@ -288,6 +288,7 @@ export const useEducation = (): TimelineItem[] => {
     location: education.location || '',
     title: education.title || '',
     content: education.content || '',
+    href: education.href || '',
   }));
 };
 

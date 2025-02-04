@@ -1,19 +1,23 @@
 import { FC, useEffect, useState, memo } from 'react';
 import Image from 'next/image';
-import mallorcaImage1 from '../images/fondo/mallorca1.jpg';
-import mallorcaImage2 from '../images/fondo/mallorca2.jpg';
-import mallorcaImage3 from '../images/fondo/mallorca3.jpg';
-import mallorcaImage4 from '../images/fondo/mallorca4.jpg';
-import mallorcaImage5 from '../images/fondo/mallorca5.jpg';
-import mallorcaImage6 from '../images/fondo/mallorca6.jpg';
-import mallorcaImage7 from '../images/fondo/mallorca7.jpg';
-import mallorcaImage8 from '../images/fondo/mallorca8.jpg';
-import mallorcaImage9 from '../images/fondo/mallorca9.jpg';
-import mallorcaImage10 from '../images/fondo/mallorca10.jpg';
-import mallorcaImage11 from '../images/fondo/mallorca11.jpg';
-import mallorcaImage12 from '../images/fondo/mallorca12.jpg';
-import mallorcaImage13 from '../images/fondo/mallorca13.jpg';
-import mallorcaImage14 from '../images/fondo/mallorca14.jpg';
+import mallorcaImage1 from '../images/fondo/mallorca1.webp';
+import mallorcaImage2 from '../images/fondo/mallorca2.webp';
+import mallorcaImage3 from '../images/fondo/mallorca3.webp';
+import mallorcaImage4 from '../images/fondo/mallorca4.webp';
+import mallorcaImage5 from '../images/fondo/mallorca5.webp';
+import mallorcaImage6 from '../images/fondo/mallorca6.webp';
+import mallorcaImage7 from '../images/fondo/mallorca7.webp';
+import mallorcaImage8 from '../images/fondo/mallorca8.webp';
+import mallorcaImage9 from '../images/fondo/mallorca9.webp';
+import mallorcaImage10 from '../images/fondo/mallorca10.webp';
+import mallorcaImage11 from '../images/fondo/mallorca11.webp';
+import mallorcaImage12 from '../images/fondo/mallorca12.webp';
+import mallorcaImage13 from '../images/fondo/mallorca13.webp';
+import mallorcaImage14 from '../images/fondo/mallorca14.webp';
+import mallorcaImage15 from '../images/fondo/mallorca15.webp';
+import mallorcaImage16 from '../images/fondo/mallorca16.webp';
+import mallorcaImage17 from '../images/fondo/mallorca17.webp';
+import mallorcaImage18 from '../images/fondo/mallorca18.webp';
 
 const HeroImg: FC = memo(() => {
   const images = [
@@ -31,6 +35,10 @@ const HeroImg: FC = memo(() => {
     mallorcaImage12,
     mallorcaImage13,
     mallorcaImage14,
+    mallorcaImage15,
+    mallorcaImage16,
+    mallorcaImage17,
+    mallorcaImage18,
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -45,7 +53,7 @@ const HeroImg: FC = memo(() => {
         setFade(false); // Restablece el estado de desvanecimiento
       }, 1000); // Duración de la transición (desaparecer + aparecer)
 
-    }, 7000); // Cambia cada 5 segundos
+    }, 5000); // Cambia cada 5 segundos
 
     return () => clearInterval(interval); // Limpia el intervalo al desmontar
   }, [images.length]);

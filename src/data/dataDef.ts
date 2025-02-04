@@ -92,6 +92,7 @@ export interface TimelineItem {
   location: string;
   title: string;
   content: any;
+  href?: string;
 }
 
 /**
