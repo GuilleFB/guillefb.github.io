@@ -148,8 +148,92 @@
           "Published research in peer-reviewed journals, enhancing academic impact and supporting evidence-based policy decisions.",
           "Developed resilience and time-management skills in fast-paced, multidisciplinary environments, particularly during offshore campaigns and high-stakes EU-funded initiatives."
         ]
+      },
+      {
+        "date": "June 2016 - November 2020",
+        "location": "Marine Research and Aquaculture Laboratory (LIMIA)",
+        "title": "PhD Student",
+        "content": [
+          "Development of an innovative doctoral thesis in marine ecology, using underwater cameras to estimate absolute fish densities without bait.",
+          "Implementation of advanced Bayesian statistical models and geospatial analysis with R, Python, and SQL.",
+          "Publication of results in scientific journals and presentations at international conferences.",
+          "Applied Skills:",
+          [
+            "Statistical modeling (Bayesian)",
+            "Statistical programming (R/Python/SQL)",
+            "Data Science",
+            "LaTeX",
+            "Spatial analysis using GIS (QGIS, ArcGIS)"
+          ],
+          "Developed Skills:",
+          [
+            "Independent research",
+            "Scientific communication",
+            "Critical thinking",
+            "Management of multidisciplinary projects"
+          ]
+        ]
+      },
+      {
+        "date": "December 2015 - May 2016",
+        "location": "Alevines de Guardamar S.L.",
+        "title": "Technical Biologist",
+        "content": [
+          "Comprehensive coordination of pre-fattening of fingerlings (sea bream/sea bass) for national and international companies.",
+          "Design of growth prediction models and optimization of feeding and biometric protocols.",
+          "Logistical management of transport and vaccination of sea bream and sea bass fingerlings.",
+          "Applied Skills:",
+          [
+            "Production management",
+            "Logistics",
+            "Aquaculture biometrics"
+          ],
+          "Developed Skills:",
+          [
+            "Technical leadership",
+            "Client negotiation",
+            "Operational problem-solving"
+          ]
+        ]
+      },
+      {
+        "date": "January 2014 - September 2014",
+        "location": "Murcian Institute of Agricultural and Food Research and Development (IMIDA)",
+        "title": "Master's Student",
+        "content": [
+          "Research in semi-closed fish farming systems, analysis of nutrient digestibility, and AIA methods.",
+          "Statistical validation of experimental results using R.",
+          "Applied Skills:",
+          [
+            "Laboratory techniques",
+            "Biochemical analysis",
+            "Applied statistics"
+          ],
+          "Developed Skills:",
+          [
+            "Experimental design",
+            "Interpretation of complex data",
+            "Work in controlled environments"
+          ]
+        ]
+      },
+      {
+        "date": "2014-2015; 2005-2011",
+        "location": "Springfield, Bodegas Roque S.L.",
+        "title": "Commercial and Logistics Roles",
+        "content": [
+          "Retail sales management, customer service, and strategic inventory replenishment (retail).",
+          "Optimization of distribution routes and warehouse management (B2B).",
+          "Key Skills:",
+          [
+            "Adaptability",
+            "Pressure management",
+            "Teamwork",
+            "Attention to detail"
+          ]
+        ]
       }
-    ],
+  ],
   "contact": {
     "headerText": "Get in touch.",
     "description": "If you have any questions or would like to discuss a project, please feel free to contact me."

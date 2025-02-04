@@ -148,7 +148,91 @@
         "Publicación de investigaciones en revistas revisadas por pares, lo que aumenta el impacto académico y respalda las decisiones políticas basadas en pruebas.",
         "Desarrollé la capacidad de adaptación y gestión del tiempo en entornos multidisciplinares de ritmo rápido, especialmente durante campañas de muestreo (buceo) e iniciativas financiadas por la UE con grandes riesgos."
       ]
-    }
+    },
+    {
+        "date": "Junio 2016 - Noviembre 2020",
+        "location": "Laboratorio de Investigaciones Marinas y Acuicultura (LIMIA)",
+        "title": "Estudiante de Doctorado",
+        "content": [
+          "Desarrollo de tesis doctoral innovadora en ecología marina, utilizando cámaras subacuáticas para estimar densidades absolutas de peces sin cebo.",
+          "Implementación de modelos estadísticos bayesianos avanzados y análisis geoespaciales con R, Python y SQL.",
+          "Publicación de resultados en revistas científicas y presentación en congresos internacionales.",
+          "Aptitudes Aplicadas:",
+          [
+            "Modelado estadístico (Bayesiano)", 
+            "Programación estadistica (R/Python/SQL)", 
+            "Ciencia de Datos", 
+            "LaTeX", 
+            "Análisis espacial basado en SIG (QGIS, ArcGIS)"
+          ],
+          "Aptitudes Aplicadas:",
+          [
+            "Investigación autónoma", 
+            "Comunicación científica", 
+            "Pensamiento crítico", 
+            "Gestión de proyectos multidisciplinares"
+          ]
+        ]
+      },
+      {
+        "date": "Diciembre 2015 - Mayo 2016",
+        "location": "Alevines de Guardamar S.L.",
+        "title": "Biólogo Técnico",
+        "content": [
+          "Coordinación integral del pre-engorde de alevines (dorada/lubina) para empresas nacionales e internacionales.",
+          "Diseño de modelos predictivos de crecimiento y optimización de protocolos de alimentación y biometrías.",
+          "Gestión logística de transporte y vacunación de alevines de dorada y lubina.",
+          "Aptitudes Aplicadas:",
+          [
+            "Gestión de producción", 
+            "Logística", 
+            "Biometría acuícola"
+          ],
+          "Aptitudes Aplicadas:",
+          [
+            "Liderazgo técnico", 
+            "Negociación con clientes", 
+            "Resolución de problemas operativos"
+          ]
+        ]
+      },
+      {
+        "date": "Enero 2014 - Septiembre 2014",
+        "location": "Instituto Murciano de Investigación y Desarrollo Agrario y Alimentario (IMIDA)",
+        "title": "Estudiante de Master",
+        "content": [
+          "Investigación en sistemas semi-cerrados de cultivo de peces, análisis de digestibilidad de nutrientes y métodos AIA.",
+          "Validación estadística de resultados experimentales usando R.",
+          "Aptitudes Aplicadas:",
+          [
+            "Técnicas de laboratorio", 
+            "Análisis bioquímico", 
+            "Estadística aplicada"
+          ],
+          "Aptitudes Aplicadas:",
+          [
+            "Diseño experimental", 
+            "Interpretación de datos complejos", 
+            "Trabajo en entornos controlados"
+          ]
+        ]
+      },
+      {
+        "date": "2014-2015; 2005-2011",
+        "location": "Springfield, Bodegas Roque S.L.",
+        "title": "Roles Comerciales y Logísticos",
+        "content": [
+          "Gestión de ventas minoristas, atención al cliente y reposición estratégica de inventario (retail).",
+          "Optimización de rutas de distribución y gestión de almacén (B2B).",
+          "Aptitudes clave:",
+          [
+            "Adaptabilidad", 
+            "Gestión de presión", 
+            "Trabajo en equipo",
+            "orientación al detalle"
+          ]
+        ]
+      }
   ],
   "contact": {
     "headerText": "Póngase en contacto.",
