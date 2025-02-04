@@ -3,7 +3,7 @@ import {FC, memo} from 'react';
 // Use a type-only import for TimelineItem
 import type {TimelineItem as TimelineItemType} from '../../../data/dataDef';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import { faFileArrowDown } from '@fortawesome/free-solid-svg-icons';
+import {faFileArrowDown} from '@fortawesome/free-solid-svg-icons';
 
 // Use a different name for the component
 const TimelineItemComponent: FC<{item: TimelineItemType}> = memo(({item}) => {
