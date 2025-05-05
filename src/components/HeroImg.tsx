@@ -41,36 +41,58 @@ const HeroImg: FC = memo(() => {
     mallorcaImage18,
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [fade, setFade] = useState(false);
+  // Mantenemos dos índices para gestionar las dos imágenes que se mostrarán
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [prevIndex, setPrevIndex] = useState(0);
+  // Alternamos qué imagen está en la capa superior
+  const [topImageIsActive, setTopImageIsActive] = useState(true);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setFade(true); // Inicia el desvanecimiento
-
-      setTimeout(() => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length); // Incrementa el índice, reinicia al llegar al final
-        setFade(false); // Restablece el estado de desvanecimiento
-      }, 1000); // Duración de la transición (desaparecer + aparecer)
-
+      // Guardamos el índice actual como previo
+      setPrevIndex(activeIndex);
+      // Calculamos el siguiente índice para la imagen activa
+      setActiveIndex((prevActive) => (prevActive + 1) % images.length);
+      // Alternamos qué imagen está en la capa superior
+      setTopImageIsActive(prev => !prev);
     }, 5000); // Cambia cada 5 segundos
 
-    return () => clearInterval(interval); // Limpia el intervalo al desmontar
-  }, [images.length]);
+    return () => clearInterval(interval);
+  }, [activeIndex, images.length]);
 
   return (
-    <div className="relative w-full h-full">
-      {/* Imagen actual con transición de opacidad */}
+    <div className="relative w-full h-full overflow-hidden">
+      {/* Primera capa de imagen */}
       <div
-        className="absolute inset-0 w-full h-full transition-opacity duration-1000"
-        style={{ opacity: fade ? '0.1' : '1' }}
+        className="absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out"
+        style={{ 
+          opacity: topImageIsActive ? 1 : 0,
+          zIndex: topImageIsActive ? 2 : 1 
+        }}
       >
         <Image
-          alt="Imagen actual"
+          alt={`Mallorca imagen ${activeIndex + 1}`}
           className="w-full h-full object-cover"
           placeholder="blur"
           priority
-          src={images[currentIndex]}
+          src={images[activeIndex]}
+        />
+      </div>
+
+      {/* Segunda capa de imagen (siempre visible debajo cuando hay transición) */}
+      <div
+        className="absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out"
+        style={{ 
+          opacity: topImageIsActive ? 0 : 1,
+          zIndex: topImageIsActive ? 1 : 2 
+        }}
+      >
+        <Image
+          alt={`Mallorca imagen ${prevIndex + 1}`}
+          className="w-full h-full object-cover"
+          placeholder="blur"
+          priority
+          src={images[prevIndex]}
         />
       </div>
     </div>
