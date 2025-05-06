@@ -96,6 +96,18 @@
       "client": "HotChair, a project which goal is to offer companies a user-friendly app to make workspace reservations.",
       "description": "",
       "url": "https://hotchair.es/"
+    },
+    {
+      "title": "Personal Projects",
+      "client": "HoldWatcher, a web app to monitor https://hodlhodl.com/ offers 24/7 based on your specific criteria. Deployed in Tor. Send emails and/or telegram messages when a new offer is available.",
+      "description": "",
+      "url": "https://pd25ggldit7tsmxobywx4tblydhldh4iyhongdf4wby3rderx37t6sid.onion/"
+    },
+    {
+      "title": "Personal Projects",
+      "client": "Xedule, a project which goal is to to schedule the publication of notes on Twitter and/or Nostr.",
+      "description": "",
+      "url": "https://github.com/GuilleFB/Xedule"
     }
   ],
   "work_title": "Work",
